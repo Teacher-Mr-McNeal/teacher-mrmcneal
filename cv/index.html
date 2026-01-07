@@ -1,1 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryan McNeal — STEAM, Design Tech & Experiential Learning</title>
+  <meta name="description" content="Resume of Ryan McNeal — STEAM, Design Technology, Experiential Learning Coordinator, and Activities Leader." />
+
+  <!-- Accessible color scheme + typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ====== CSS: W3C-compliant, semantic, accessible, responsive, print-friendly ====== */
+
+    :root {
+      /* Eye-catching professional palette */
+      --bg: #0f172a;            /* slate-900 */
+      --bg-elev: #111827;       /* gray-900 */
+      --text: #e5e7eb;          /* gray-200 */
+      --muted: #cbd5e1;         /* slate-300 */
+      --accent: #22d3ee;        /* cyan-400 */
+      --accent-2: #a78bfa;      /* violet-400 */
+      --card: #1f2937;          /* gray-800 */
+      --border: #334155;        /* slate-700 */
+      --link: #38bdf8;          /* sky-400 */
+      --focus: #f59e0b;         /* amber-500 */
+
+      --maxw: 1100px;
+      --radius: 14px;
+      --radius-sm: 10px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+      --font-sans: "Inter", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    /* Light mode (default) */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --bg-elev: #f8fafc;     /* slate-50 */
+        --text: #0f172a;        /* slate-900 */
+        --muted: #334155;       /* slate-700 */
+        --accent: #0ea5e9;      /* sky-500 */
+        --accent-2: #7c3aed;    /* violet-600 */
+        --card: #ffffff;
+        --border: #e2e8f0;      /* slate-200 */
+        --link: #0ea5e9;
+        --focus: #f59e0b;
+      }
+    }
+
+    /* Manual theme override via [data-theme] */
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --bg-elev: #111827;
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #22d3ee;
+      --accent-2: #a78bfa;
+      --card: #1f2937;
+      --border: #334155;
+      --link: #38bdf8;
+      --focus: #f59e0b;
+    }
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-elev: #f8fafc;
+      --text: #0f172a;
+      --muted: #334155;
+      --accent: #0ea5e9;
+      --accent-2: #7c3aed;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --link: #0ea5e9;
+      --focus: #f59e0b;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layout */
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header[role="banner"] {
+      background: linear-gradient(135deg, var(--bg-elev), var(--card));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+    }
+    .header-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .identity h1 {
+      margin: 0 0 6px;
+      font-size: 2rem;
+      letter-spacing: 0.2px;
+    }
+    .identity .tagline {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .contact {
+      display: grid;
+      gap: 6px;
+      font-size: 0.95rem;
+    }
+    .contact a {
+      color: var(--link);
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .contact a:hover,
+    .contact a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Action bar */
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.08s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:focus {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .btn-accent {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1020;
+    }
+
+    main[role="main"] {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    /* Cards / sections */
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    section > header h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      letter-spacing: 0.2px;
+    }
+    section > header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Content patterns */
+    .summary p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+    .role {
+      border-top: 1px dashed var(--border);
+      padding-top: 14px;
+    }
+    .role:first-child { border-top: none; padding-top: 0; }
+    .role header {
+      display: grid;
+      gap: 4px;
+    }
+    .role h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .role ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    .role li {
+      margin: 6px 0;
+    }
+
+    .edu-list, .cred-list, .ref-list {
+      display: grid;
+      gap: 12px;
+    }
+    .edu-item, .cred-item, .ref-item {
+      border-top: 1px dashed var(--border);
+      padding-top: 12px;
+    }
+    .edu-item:first-child,
+    .cred-item:first-child,
+    .ref-item:first-child { border-top: none; padding-top: 0; }
+
+    .edu-item h3, .cred-item h3, .ref-item h3 {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .edu-item .meta,
+    .cred-item .meta,
+    .ref-item .meta {
+      margin-top: 2px;
+    }
+
+    .ref-contact a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .ref-contact a:hover,
+    .ref-contact a:focus { text-decoration: underline; }
+
+    /* Footer */
+    footer[role="contentinfo"] {
+      margin: 24px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (min-width: 900px) {
+      main[role="main"] {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+      .summary,
+      .experience { grid-column: 1; }
+      .education,
+      .credentials,
+      .references { grid-column: 2; }
+    }
+
+    /* Print styles (for PDF) */
+    @media print {
+      :root {
+        --bg: #ffffff;
+        --bg-elev: #ffffff;
+        --text: #000000;
+        --muted: #333333;
+        --card: #ffffff;
+        --border: #cccccc;
+        --link: #0000ee;
+      }
+      header[role="banner"],
+      section {
+        box-shadow: none;
+        border: 1px solid var(--border);
+      }
+      .actions { display: none !important; }
+      a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #555;
+      }
+      .wrap { padding: 0; }
+      body { margin: 12mm; }
+    }
+  </style>
+
+  <!-- Schema.org microdata (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ryan McNeal",
+    "jobTitle": "Experiential Learning Coordinator; STEAM & Design Technology Educator",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "India"
+    },
+    "telephone": "+91 9606914636",
+    "email": "teachermrmcneal@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/ryan-mcneal-344343138",
+      "https://www.instagram.com/teachermrmcneal"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Canadian International School Bangalore"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header role="banner" aria-label="Header with identity and contact">
+      <div class="header-grid">
+        <div class="identity">
+          <h1 itemprop="name">Ryan McNeal</h1>
+          <p class="tagline" itemprop="jobTitle">STEAM | Design Tech | Experiential Learning | After School Activities</p>
+          <p class="meta" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">New Town, Yelahanka</span> — 
+            <span itemprop="addressLocality">Bangalore</span>, 
+            <span itemprop="addressCountry">India</span>
+          </p>
+        </div>
+
+        <address class="contact" aria-label="Visible contact details">
+          <span><strong>Phone:</strong> <a href="tel:+919606914636" itemprop="telephone">+91 9606914636</a></span>
+          <span><strong>Email:</strong> <a href="mailto:teachermrmcneal@gmail.com" itemprop="email">teachermrmcneal@gmail.com</a></span>
+          <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ryan-mcneal-344343138" rel="me">https://www.linkedin.com/in/ryan-mcneal-344343138</a></span>
+          <span><strong>Instagram:</strong> <a href="https://www.instagram.com/teachermrmcneal" rel="me">https://www.instagram.com/teachermrmcneal</a></span>
+        </address>
+      </div>
+
+      <div class="actions" role="group" aria-label="Actions">
+        <button class="btn btn-accent" type="button" id="printBtn" aria-label="Download or print PDF">Download / Print PDF</button>
+        <button class="btn" type="button" id="themeBtn" aria-label="Toggle dark or light theme">Toggle Dark/Light</button>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- Summary -->
+      <section class="summary" aria-labelledby="summary-title" itemscope itemtype="https://schema.org/CreativeWork">
+        <header>
+          <h2 id="summary-title">Professional summary</h2>
+          <p>Overview of experience and focus areas</p>
+        </header>
+        <p itemprop="abstract">
+          In my role as an Experiential Learning Coordinator, I am committed to providing global learners with enriching educational experiences. Through close collaboration with teaching teams, I organize activities and trips that spark curiosity and foster a love for discovery, learning and adventure. I leverage my experience as a STEAM and Technology teacher to inspire students to become innovative problem solvers.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience" aria-labelledby="experience-title">
+        <header>
+          <h2 id="experience-title">Experience</h2>
+          <p>Selected roles and impact</p>
+        </header>
+
+        <div class="timeline">
+          <article class="role" itemscope itemtype="https://schema.org/EmployeeRole">
+            <header>
+              <h3 itemprop="roleName">ES Experiential Learning (EL) Coordinator</h3>
+              <p class="meta">
+                <span itemprop="startDate" content="2024-07">July 2024</span> – <span itemprop="endDate">Present</span>, <span itemprop="location">India</span> — 
+                <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Canadian International School Bangalore</span></span>
+              </p>
+            </header>
+            <ul>
+              <li>Collaborating with grade level teaching teams to plan and execute curriculum-aligned experiential learning activities and field trips for students.</li>
+              <li>Developing new experiential learning events with teaching and leadership teams.</li>
+              <li>Collaborating with various stakeholders to plan and execute events.</li>
+              <li>Conducting comprehensive risk assessments for experiential learning trips.</li>
+              <li>Creating a master schedule for trips and on-campus EL events for the academic year.</li>
+              <li>Creating a student behavior matrix for experiential learning trips.</li>
+              <li>Managing a budget for the EL department.</li>
+              <li>Leading a Professional Exploration group to plan and conduct action research related to experiential learning in our current school context.</li>
+              <li>Using a variety of feedback (teacher, student, parent, leadership) to improve EL experiences.</li>
+              <li>Collaborating with the ES Student Support Team (learning support and counseling) to implement support for diverse learners during EL trips and activities.</li>
+              <li>Hosting Parent Nights to share important information about EL trips with parents, and to address any questions they may have.</li>
+              <li>Updating the school’s EL operations manual.</li>
+            </ul>
+          </article>
+
+          <article class="role" itemscope itemtype="https://schema.org/EmployeeRole">
+            <header>
+              <h3 itemprop="roleName">ES After School Activities Coordinator</h3>
+              <p class="meta">
+                <span itemprop="startDate" content="2024-07">July 2024</span> – <span itemprop="endDate">Present</span>, <span itemprop="location">India</span> — 
+                <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Canadian International School Bangalore</span></span>
+              </p>
+            </header>
+            <ul>
+              <li>Creating a master schedule of after school activities for the academic year.</li>
+              <li>Creating team rosters for various after school activities.</li>
+              <li>Forming community partnerships with coaches and sports teams in Bangalore.</li>
+              <li>Working with external vendors for resources like uniforms and equipment.</li>
+              <li>Managing the budget for after school activities.</li>
+              <li>Implementing technologies and systems to efficiently collect and organize data.</li>
+              <li>Developing marketing media to promote activities.</li>
+              <li>Planning and executing after school activities sporting events.</li>
+              <li>Collaborating with the facilities and management teams to ensure upkeep and safety of school courts and equipment.</li>
+            </ul>
+          </article>
+
+          <article class="role" itemscope itemtype="https://schema.org/EmployeeRole">
+            <header>
+              <h3 itemprop="roleName">MS STEM, Design Technology & Computer Science</h3>
+              <p class="meta">
+                <span itemprop="startDate" content="2022-07">July 2022</span> – <span itemprop="endDate" content="2024-06">June 2024</span>, <span itemprop="location">Cayman Islands</span> — 
+                <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Cayman International School</span></span>
+              </p>
+            </header>
+            <ul>
+              <li>Implemented the CS First curriculum for grades 6–8.</li>
+              <li>Taught the Engineering Design Cycle through hands-on STEM/STEAM activities.</li>
+              <li>Used Google Applied Digital Skill to teach office automation through engaging STEM projects.</li>
+              <li>Implemented First Lego League.</li>
+              <li>Implemented Py-Brick with Legos for STEM and Computer Science learning.</li>
+              <li>Collaborated with the vertical STEM/Tech department for alignment of practices, curriculum development, and evaluation of resources.</li>
+              <li>Collaborated with the Student Support Team to ensure students with IEPs received necessary accommodations.</li>
+              <li>Applied Universal Design for Learning (UDL) principles to limit barriers for diverse learners.</li>
+              <li>SCUBA Club Coach.</li>
+            </ul>
+          </article>
+
+          <article class="role" itemscope itemtype="https://schema.org/EmployeeRole">
+            <header>
+              <h3 itemprop="roleName">HS Engineering and Computer Science</h3>
+              <p class="meta">
+                <span itemprop="startDate" content="2019-08">August 2019</span> – <span itemprop="endDate" content="2022-06">June 2022</span>, <span itemprop="location">United States</span> — 
+                <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Decatur High School</span></span>
+              </p>
+            </header>
+            <ul>
+              <li>Taught high school computer science.</li>
+              <li>Utilized Project Lead the Way Engineering curriculum.</li>
+              <li>Career Technical Education Department Chair (2021–2022).</li>
+              <li>Native American Club Advisor.</li>
+              <li>FIRST Inspires Robotics Competition Club Coach.</li>
+            </ul>
+          </article>
+
+          <article class="role" itemscope itemtype="https://schema.org/EmployeeRole">
+            <header>
+              <h3 itemprop="roleName">MS ELL, Robotics, and Computer Science</h3>
+              <p class="meta">
+                <span itemprop="startDate" content="2016-08">August 2016</span> – <span itemprop="endDate" content="2018-06">June 2018</span>, <span itemprop="location">United States</span> — 
+                <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Mill Creek Middle School</span></span>
+              </p>
+            </header>
+            <ul>
+              <li>Supported integration of EAL immigrant students into general education using varied strategies.</li>
+              <li>Built language proficiency through one-to-one and small group instruction.</li>
+              <li>Collaborated with teachers to plan differentiated instruction accessible to ELLs.</li>
+              <li>Delivered small group reading intervention for below-grade-level readers.</li>
+              <li>Implemented code.org curriculum for MS Computer Science.</li>
+              <li>Taught Lego robotics through FIRST Lego League.</li>
+              <li>Ukulele Club Advisor.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="education" aria-labelledby="education-title">
+        <header>
+          <h2 id="education-title">Education</h2>
+          <p>Degrees and certifications</p>
+        </header>
+
+        <div class="edu-list">
+          <article class="edu-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3><span itemprop="name">Certificate in School Leadership — Washington State Principal Certification</span></h3>
+            <p class="meta">
+              <span itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <span itemprop="name">Eastern Washington University</span>
+              </span> — <time itemprop="dateCreated" datetime="2024-06">June 2024</time>
+            </p>
+          </article>
+
+          <article class="edu-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3><span itemprop="name">Masters in Teaching: Secondary Education</span></h3>
+            <p class="meta">
+              <span itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <span itemprop="name">Liberty University</span>
+              </span> — <time itemprop="dateCreated" datetime="2016-06">June 2016</time>
+            </p>
+          </article>
+
+          <article class="edu-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3><span itemprop="name">Masters in Teaching: Special Education</span></h3>
+            <p class="meta">
+              <span itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <span itemprop="name">Liberty University</span>
+              </span> — <time itemprop="dateCreated" datetime="2016-06">June 2016</time>
+            </p>
+          </article>
+
+          <article class="edu-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3><span itemprop="name">Bachelors of Science: Business Instruction</span></h3>
+            <p class="meta">
+              <span itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <span itemprop="name">Central Washington University</span>
+              </span> — <time itemprop="dateCreated" datetime="2010-06">June 2010</time>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Certificates & Credentials -->
+      <section class="credentials" aria-labelledby="credentials-title">
+        <header>
+          <h2 id="credentials-title">Certificates & credentials</h2>
+          <p>Professional qualifications</p>
+        </header>
+
+        <div class="cred-list">
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">MYP Design Category 1 — International Baccalaureate</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">Wilderness First Aid/Wilderness First Responder Instructor — BASE Medical</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">UDL Credentials 1 & 2 — Center for Applied Special Technology</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">Certificate in STEM Education — National Institute for STEM Education</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">Teaching Speakers of Other Languages — Western Washington University</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">Associates in Arts and Sciences Technical Certificate: Front End Web Development — Peninsula College, Washington</h3>
+          </article>
+          <article class="cred-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemprop="name">Master Scuba Diver Trainer — Professional Association of Diving Instructors (PADI)</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- References -->
+      <section class="references" aria-labelledby="references-title">
+        <header>
+          <h2 id="references-title">References</h2>
+          <p>Professional contacts</p>
+        </header>
+
+        <div class="ref-list">
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Chris Mockrish</h3>
+            <p class="meta">ES Principal — Canadian International School Bangalore</p>
+            <p class="ref-contact"><a href="mailto:esprincipal@cisb.org.in" itemprop="email">esprincipal@cisb.org.in</a></p>
+          </article>
+
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Stacie Bosley</h3>
+            <p class="meta">Literacy and Curriculum Coordinator — Canadian International School Bangalore</p>
+            <p class="ref-contact"><a href="mailto:eslitcoordinator@cisb.org.in" itemprop="email">eslitcoordinator@cisb.org.in</a></p>
+          </article>
+
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Allie Hustead</h3>
+            <p class="meta">Assistant Principal — Cayman International School</p>
+            <p class="ref-contact"><a href="mailto:allie.hustead@cis.ky" itemprop="email">allie.hustead@cis.ky</a></p>
+          </article>
+
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Dr. Manouchka Pierre</h3>
+            <p class="meta">Assistant Principal (former) — Cayman International School</p>
+            <p class="ref-contact"><a href="mailto:mpierre@gwa.ac.ma" itemprop="email">mpierre@gwa.ac.ma</a></p>
+          </article>
+
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Dennis Eller</h3>
+            <p class="meta">Assistant Principal — Sacajawea Middle School</p>
+            <p class="ref-contact"><a href="mailto:reller@fwps.org" itemprop="email">reller@fwps.org</a></p>
+          </article>
+
+          <article class="ref-item" itemscope itemtype="https://schema.org/Person">
+            <h3 itemprop="name">Charleen Prichard</h3>
+            <p class="meta">Principal — Kilo Middle School</p>
+            <p class="ref-contact"><a href="mailto:cprichard@fwps.org" itemprop="email">cprichard@fwps.org</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo" aria-label="Footer">
+      <p>© <span id="year"></span> Ryan McNeal — All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Minimal JS: theme toggle + print/PDF + year -->
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('themeBtn');
+      const printBtn = document.getElementById('printBtn');
+      const yearEl = document.getElementById('year');
+
+      // Set current year
+      yearEl.textContent = new Date().getFullYear();
+
+      // Theme toggle: cycles between auto (no data-theme), dark, light
+      let mode = 'auto'; // auto -> dark -> light -> auto
+      function applyMode(next) {
+        if (next === 'auto') {
+          root.removeAttribute('data-theme');
+          themeBtn.textContent = 'Toggle Dark/Light';
+        } else {
+          root.setAttribute('data-theme', next);
+          themeBtn.textContent = next === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+        }
+        mode = next;
+      }
+      themeBtn.addEventListener('click', function () {
+        if (mode === 'auto') applyMode('dark');
+        else if (mode === 'dark') applyMode('light');
+        else applyMode('auto');
+      });
+
+      // Print to PDF (uses browser print dialog)
+      printBtn.addEventListener('click', function () {
+        window.print();
+      });
+    })();
+  </script>
+</body>
+</html>
 
