@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Mr. McNeal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #000;
+      color: #d4af37; /* muted gold */
+    }
+
+    /* Hero words */
+    .hero-words {
+      text-align: center;
+      font-size: 3rem;
+      padding: 40px 20px;
+      letter-spacing: 2px;
+    }
+
+    /* Carousel container */
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      display: none;
+      object-fit: cover;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    /* Links section */
+    .links {
+      text-align: right;
+      padding: 20px;
+    }
+
+    .links a {
+      color: #d4af37;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.1rem;
+    }
+
+    .links a:focus,
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Accessibility: high contrast focus outline */
+    a:focus {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-words {
+        font-size: 2rem;
+      }
+      .links {
+        text-align: center;
+      }
+      .links a {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero section -->
+  <header class="hero-words" role="banner" aria-label="Homepage keywords">
+    <span>Focus</span> · <span>Impact</span> · <span>Insight</span>
+  </header>
+
+  <!-- Carousel -->
+  <section class="carousel" role="region" aria-label="Photo carousel of my work" id="carousel">
+    <!-- Images will be injected by JavaScript -->
+  </section>
+
+  <!-- Links -->
+  <nav class="links" role="navigation" aria-label="External links">
+    <a href="https://www.teachermrmcneal.org/cv" aria-label="View Curriculum Vitae document">Curriculum Vitae</a>
+    <a href="https://www.teachermrmcneal.org/instagram" aria-label="Visit Instagram page">Instagram</a>
+    <a href="research.html" aria-label="Read research materials">Research</a>
+    <a href="lessons.html" aria-label="Access lesson plans">Lesson Plans</a>
+    <a href="mailto:teachermrmcneal@gmail.com" aria-label="Send an email to Teacher Mr. McNeal">Email</a>
+  </nav>
+
+  <script>
+    // Configuration
+    const totalImages = 57; // update if you add more
+    const imageFolder = "images/";
+    const imagePrefix = "img";
+    const imageExt = ".jpg";
+
+    const carousel = document.getElementById("carousel");
+
+    // Dynamically load images
+    for (let i = 1; i <= totalImages; i++) {
+      const num = String(i).padStart(3, '0'); // ensures 001, 002, etc.
+      const img = document.createElement("img");
+      img.src = `${imageFolder}${imagePrefix}${num}${imageExt}`;
+      img.alt = `Photography work ${i}`;
+      if (i === 1) img.classList.add("active");
+      carousel.appendChild(img);
+    }
+
+    // Auto-rotate
+    let currentIndex = 0;
+    const images = carousel.querySelectorAll("img");
+
+    function showNextImage() {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextImage, 4000); // change every 4 seconds
+  </script>
+</body>
+</html>
