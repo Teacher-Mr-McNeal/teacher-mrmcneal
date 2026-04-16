@@ -28,4 +28,136 @@
     .hero-words {
       font-family: 'Dancing Script', cursive;
       font-size: 3rem;
-      letter
+      letter-spacing: 2px;
+      text-align: left;
+    }
+
+    .site-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      text-align: right;
+    }
+
+    /* Carousel container */
+    .carousel {
+      position: relative;
+      flex: 1; /* fills available space between header and footer */
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* ensures full image fits without cropping */
+      opacity: 0;
+      transition: opacity 2s ease; /* fade effect */
+    }
+
+    .carousel img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    /* Links section */
+    .links {
+      text-align: right;
+      padding: 20px;
+    }
+
+    .links a {
+      color: #d4af37;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.1rem;
+    }
+
+    .links a:focus,
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Accessibility: high contrast focus outline */
+    a:focus {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-words {
+        font-size: 2rem;
+      }
+      .site-name {
+        font-size: 2.5rem;
+      }
+      .links {
+        text-align: center;
+      }
+      .links a {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with hero words and site name -->
+  <header class="header" role="banner">
+    <div class="hero-words">Focus · Impact · Insight</div>
+    <div class="site-name">Teacher Mr. McNeal</div>
+  </header>
+
+  <!-- Carousel -->
+  <section class="carousel" role="region" aria-label="Photo carousel of my work" id="carousel">
+    <!-- Images will be injected by JavaScript -->
+  </section>
+
+  <!-- Links -->
+  <nav class="links" role="navigation" aria-label="External links">
+    <a href="https://www.teachermrmcneal.org/cv" aria-label="View Curriculum Vitae document">Curriculum Vitae</a>
+    <a href="https://www.teachermrmcneal.org/instagram" aria-label="Visit Instagram page">Instagram</a>
+    <a href="research.html" aria-label="Read research materials">Research</a>
+    <a href="lessons.html" aria-label="Access lesson plans">Lesson Plans</a>
+    <a href="mailto:teachermrmcneal@gmail.com" aria-label="Send an email to Teacher Mr. McNeal">Email</a>
+  </nav>
+
+  <script>
+    // Configuration
+    const totalImages = 57; // update if you add more
+    const imageFolder = "images/";
+    const imagePrefix = "img";
+    const imageExt = ".jpg";
+
+    const carousel = document.getElementById("carousel");
+
+    // Dynamically load images
+    for (let i = 1; i <= totalImages; i++) {
+      const num = String(i).padStart(3, '0'); // ensures 001, 002, etc.
+      const img = document.createElement("img");
+      img.src = `${imageFolder}${imagePrefix}${num}${imageExt}`;
+      img.alt = `Photography work ${i}`;
+      if (i === 1) img.classList.add("active");
+      carousel.appendChild(img);
+    }
+
+    // Auto-rotate with fade
+    let currentIndex = 0;
+    const images = carousel.querySelectorAll("img");
+
+    function showNextImage() {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextImage, 5000); // change every 5 seconds
+  </script>
+</body>
+</html>
