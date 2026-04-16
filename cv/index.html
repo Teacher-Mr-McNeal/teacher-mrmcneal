@@ -49,11 +49,7 @@
       line-height: 1.6;
     }
 
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 20px;
-    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
 
     header[role="banner"] {
       position: sticky;
@@ -86,7 +82,6 @@
     .toggle button.active { background: var(--accent); color: #fff; }
 
     main[role="main"] { margin-top: 18px; display: grid; gap: 18px; }
-
     section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
     section > header h2 { margin: 0 0 6px; font-size: 1.25rem; color: var(--accent); }
 
@@ -123,11 +118,61 @@
     </header>
 
     <main role="main">
+      <!-- Summary -->
       <section>
         <header><h2>Professional Summary</h2></header>
-        <p>In my role as an Experiential Learning Coordinator, I am committed to providing global learners with enriching educational experiences...</p>
+        <p>In my role as an Experiential Learning Coordinator, I am committed to providing global learners with enriching educational experiences. Through close collaboration with teaching teams, I organize activities and trips that spark curiosity and foster a love for discovery, learning and adventure. I leverage my experience as a STEAM and Technology teacher to inspire students to become innovative problem solvers.</p>
       </section>
-      <!-- Add Experience, Education, Credentials, References here -->
+
+      <!-- Experience -->
+      <section>
+        <header><h2>Experience</h2></header>
+        <ul>
+          <li>ES Experiential Learning Coordinator — Canadian International School Bangalore (2024–Present)</li>
+          <li>ES After School Activities Coordinator — Canadian International School Bangalore (2024–Present)</li>
+          <li>MS STEM, Design Technology & Computer Science — Cayman International School (2022–2024)</li>
+          <li>HS Engineering and Computer Science — Decatur High School (2019–2022)</li>
+          <li>MS ELL, Robotics, and Computer Science — Mill Creek Middle School (2016–2018)</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <header><h2>Education</h2></header>
+        <ul>
+          <li>Certificate in School Leadership — Eastern Washington University (2024)</li>
+          <li>Masters in Teaching: Secondary Education — Liberty University (2016)</li>
+          <li>Masters in Teaching: Special Education — Liberty University (2016)</li>
+          <li>Bachelors of Science: Business Instruction — Central Washington University (2010)</li>
+        </ul>
+      </section>
+
+      <!-- Credentials -->
+      <section>
+        <header><h2>Certificates & Credentials</h2></header>
+        <ul>
+          <li>MYP Design Category 1 — International Baccalaureate</li>
+          <li>Wilderness First Aid/WFR Instructor — BASE Medical</li>
+          <<li>UDL Credentials 1 & 2 — Center for Applied Special Technology (CAST)</li>
+          <li>Certificate in STEM Education — National Institute for STEM Education</li>
+          <li>Teaching Speakers of Other Languages — Western Washington University</li>
+          <li>Front End Web Development Certificate — Peninsula College</li>
+          <li>Master Scuba Diver Trainer — PADI</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section>
+        <header><h2>References</h2></header>
+        <ul>
+          <li>Chris Mockrish — ES Principal, Canadian International School Bangalore — esprincipal@cisb.org.in</li>
+          <li>Stacie Bosley — Literacy & Curriculum Coordinator, Canadian International School Bangalore — eslitcoordinator@cisb.org.in</li>
+          <li>Allie Hustead — Assistant Principal, Cayman International School — allie.hustead@cis.ky</li>
+          <li>Dr. Manouchka Pierre — Assistant Principal (former), Cayman International School — mpierre@gwa.ac.ma</li>
+          <li>Dennis Eller — Assistant Principal, Federal Way High School — reller@fwps.org</li>
+          <li>Charleen Prichard — Principal, Kilo Middle School — cprichard@fwps.org</li>
+        </ul>
+      </section>
     </main>
 
     <footer role="contentinfo">
@@ -143,8 +188,10 @@
       const darkBtn = document.getElementById('darkBtn');
       const lightBtn = document.getElementById('lightBtn');
 
+      // Set current year
       yearEl.textContent = new Date().getFullYear();
 
+      // Theme toggle
       function setTheme(mode) {
         root.setAttribute('data-theme', mode === 'dark' ? 'dark' : 'light');
         darkBtn.classList.toggle('active', mode === 'dark');
@@ -157,6 +204,7 @@
       // Default to dark mode
       setTheme('dark');
 
+      // Print to PDF
       printBtn.addEventListener('click', () => window.print());
     })();
   </script>
