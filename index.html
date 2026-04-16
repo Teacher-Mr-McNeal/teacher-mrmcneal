@@ -4,44 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teacher Mr. McNeal</title>
-  <!-- Google Fonts: Dancing Script -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Sigmar One & Voltaire -->
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Voltaire&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #000;
-      color: #d4af37; /* muted gold */
+      color: #d4af37;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Header with hero words and name */
+    /* Header container */
     .header {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start; /* justify left */
+      padding-left: 0.25em;
+      padding-top: 0.25em;
+      max-width: 90%;
     }
 
-    .hero-words {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3rem;
-      letter-spacing: 2px;
+    /* Title: Teacher Mr. McNeal */
+    .site-name {
+      font-family: 'Voltaire', sans-serif;
+      font-size: 1.6rem; /* small, subtle */
+      margin-bottom: 8px;
       text-align: left;
     }
 
-    .site-name {
-      font-family: 'Dancing Script', cursive;
-      font-size: 4rem;
-      text-align: right;
+    /* Hero words block */
+    .hero-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* left aligned */
+      margin-top: 5px;
+    }
+
+    .hero-words {
+      font-family: 'Sigmar One', cursive;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-align: left;
+      border-left: 4px solid #d4af37; /* left border only */
+      padding-left: 12px; /* spacing from border */
     }
 
     /* Carousel container */
     .carousel {
       position: relative;
-      flex: 1; /* fills available space between header and footer */
+      flex: 1;
       max-width: 100%;
       overflow: hidden;
       display: flex;
@@ -55,9 +69,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain; /* ensures full image fits without cropping */
+      object-fit: contain;
       opacity: 0;
-      transition: opacity 2s ease; /* fade effect */
+      transition: opacity 2s ease;
     }
 
     .carousel img.active {
@@ -76,7 +90,7 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 1.1rem;
-      font-family: 'Dancing Script', cursive, Arial, sans-serif;
+      font-family: 'Voltaire', sans-serif;
     }
 
     .links a:focus,
@@ -84,19 +98,22 @@
       text-decoration: underline;
     }
 
-    /* Accessibility: high contrast focus outline */
     a:focus {
       outline: 2px solid #fff;
       outline-offset: 4px;
     }
 
     /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .hero-words {
-        display: none; /* hides hero text only on phones/tablets */
+    @media (max-width: 1024px) {
+      /* Hide hero words below iPad resolution */
+      .hero-block {
+        display: none;
       }
+    }
+
+    @media (max-width: 768px) {
       .site-name {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
       }
       .links {
         text-align: center;
@@ -109,10 +126,12 @@
   </style>
 </head>
 <body>
-  <!-- Header with hero words and site name -->
+  <!-- Header with site name and hero words -->
   <header class="header" role="banner">
-    <div class="hero-words">Focus · Impact · Insight</div>
     <div class="site-name">Teacher Mr. McNeal</div>
+    <div class="hero-block">
+      <div class="hero-words">Focus · Impact · Insight</div>
+    </div>
   </header>
 
   <!-- Carousel -->
@@ -131,27 +150,24 @@
 
   <script>
     // Configuration
-    const totalImages = 57; // update if you add more
+    const totalImages = 57;
     const imageFolder = "images/";
     const imagePrefix = "img";
     const imageExt = ".jpg";
 
     const carousel = document.getElementById("carousel");
 
-    // Create array of image paths
     let imagePaths = [];
     for (let i = 1; i <= totalImages; i++) {
-      const num = String(i).padStart(3, '0'); // ensures 001, 002, etc.
+      const num = String(i).padStart(3, '0');
       imagePaths.push(`${imageFolder}${imagePrefix}${num}${imageExt}`);
     }
 
-    // Shuffle array (Fisher-Yates shuffle)
     for (let i = imagePaths.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [imagePaths[i], imagePaths[j]] = [imagePaths[j], imagePaths[i]];
     }
 
-    // Add shuffled images to carousel
     imagePaths.forEach((path, index) => {
       const img = document.createElement("img");
       img.src = path;
@@ -160,7 +176,6 @@
       carousel.appendChild(img);
     });
 
-    // Auto-rotate with fade
     let currentIndex = 0;
     const images = carousel.querySelectorAll("img");
 
@@ -170,7 +185,7 @@
       images[currentIndex].classList.add("active");
     }
 
-    setInterval(showNextImage, 5000); // change every 5 seconds
+    setInterval(showNextImage, 5000);
   </script>
 </body>
 </html>
