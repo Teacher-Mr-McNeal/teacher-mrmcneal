@@ -4,38 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teacher Mr. McNeal</title>
+  <!-- Google Fonts: Dancing Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #000;
       color: #d4af37; /* muted gold */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    /* Hero words */
+    /* Header with hero words and name */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 20px;
+    }
+
     .hero-words {
-      text-align: center;
+      font-family: 'Dancing Script', cursive;
       font-size: 3rem;
-      padding: 40px 20px;
       letter-spacing: 2px;
+      text-align: left;
+    }
+
+    .site-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      text-align: right;
     }
 
     /* Carousel container */
     .carousel {
       position: relative;
+      flex: 1; /* fills available space between header and footer */
       max-width: 100%;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      display: none;
-      object-fit: cover;
+      height: 100%;
+      object-fit: contain; /* ensures full image fits without cropping */
+      opacity: 0;
+      transition: opacity 2s ease; /* fade effect */
     }
 
     .carousel img.active {
-      display: block;
+      opacity: 1;
+      z-index: 1;
     }
 
     /* Links section */
@@ -67,6 +94,9 @@
       .hero-words {
         font-size: 2rem;
       }
+      .site-name {
+        font-size: 2.5rem;
+      }
       .links {
         text-align: center;
       }
@@ -78,9 +108,10 @@
   </style>
 </head>
 <body>
-  <!-- Hero section -->
-  <header class="hero-words" role="banner" aria-label="Homepage keywords">
-    <span>Focus</span> · <span>Impact</span> · <span>Insight</span>
+  <!-- Header with hero words and site name -->
+  <header class="header" role="banner">
+    <div class="hero-words">Focus · Impact · Insight</div>
+    <div class="site-name">Teacher Mr. McNeal</div>
   </header>
 
   <!-- Carousel -->
@@ -116,7 +147,7 @@
       carousel.appendChild(img);
     }
 
-    // Auto-rotate
+    // Auto-rotate with fade
     let currentIndex = 0;
     const images = carousel.querySelectorAll("img");
 
@@ -126,7 +157,7 @@
       images[currentIndex].classList.add("active");
     }
 
-    setInterval(showNextImage, 4000); // change every 4 seconds
+    setInterval(showNextImage, 7000); // change every 7 seconds
   </script>
 </body>
 </html>
