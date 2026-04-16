@@ -76,6 +76,7 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 1.1rem;
+      font-family: 'Dancing Script', cursive, Arial, sans-serif;
     }
 
     .links a:focus,
@@ -137,15 +138,27 @@
 
     const carousel = document.getElementById("carousel");
 
-    // Dynamically load images
+    // Create array of image paths
+    let imagePaths = [];
     for (let i = 1; i <= totalImages; i++) {
       const num = String(i).padStart(3, '0'); // ensures 001, 002, etc.
-      const img = document.createElement("img");
-      img.src = `${imageFolder}${imagePrefix}${num}${imageExt}`;
-      img.alt = `Photography work ${i}`;
-      if (i === 1) img.classList.add("active");
-      carousel.appendChild(img);
+      imagePaths.push(`${imageFolder}${imagePrefix}${num}${imageExt}`);
     }
+
+    // Shuffle array (Fisher-Yates shuffle)
+    for (let i = imagePaths.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [imagePaths[i], imagePaths[j]] = [imagePaths[j], imagePaths[i]];
+    }
+
+    // Add shuffled images to carousel
+    imagePaths.forEach((path, index) => {
+      const img = document.createElement("img");
+      img.src = path;
+      img.alt = `Photography work ${index + 1}`;
+      if (index === 0) img.classList.add("active");
+      carousel.appendChild(img);
+    });
 
     // Auto-rotate with fade
     let currentIndex = 0;
@@ -157,7 +170,7 @@
       images[currentIndex].classList.add("active");
     }
 
-    setInterval(showNextImage, 5500); // change every 5.5 seconds
+    setInterval(showNextImage, 5000); // change every 5 seconds
   </script>
 </body>
 </html>
