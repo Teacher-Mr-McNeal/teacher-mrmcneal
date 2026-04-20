@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Mr. McNeal</title>
+  <!-- Google Fonts: Sigmar One & Voltaire -->
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Voltaire&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #000;
+      color: #d4af37;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header container */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0.25em;
+      padding-top: 0.25em;
+      max-width: 90%;
+      position: relative;
+    }
+
+    /* Unified hero box with continuous vertical line */
+    .hero-box {
+      border-left: 4px solid #d4af37; /* gold vertical line */
+      padding-left: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-box .site-name {
+      font-family: 'Voltaire', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-box .hero-words {
+      font-family: 'Sigmar One', cursive;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    /* Carousel container */
+    .carousel {
+      position: relative;
+      flex: 1;
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .carousel img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    /* Links section moved to top right */
+    .links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: right;
+    }
+
+    .links a {
+      color: #d4af37;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.1rem;
+      font-family: 'Voltaire', sans-serif;
+    }
+
+    .links a:focus,
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .hero-box {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-box .site-name {
+        font-size: 1.2rem;
+      }
+      .links {
+        text-align: center;
+        position: static;
+        padding: 20px;
+      }
+      .links a {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with unified hero box -->
+  <header class="header" role="banner">
+    <div class="hero-box">
+      <div class="site-name">Teacher Mr. McNeal</div>
+      <div class="hero-words">Impact · Inspire · Innovate</div>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <section class="carousel" role="region" aria-label="Photo carousel of my work" id="carousel">
+    <!-- Images will be injected by JavaScript -->
+  </section>
+
+  <!-- Links -->
+  <nav class="links" role="navigation" aria-label="External links">
+    <a href="https://www.teachermrmcneal.org/cv" aria-label="View Curriculum Vitae document">Curriculum Vitae</a>
+    <a href="https://www.teachermrmcneal.org/instagram" aria-label="Visit Instagram page">Instagram</a>
+    <!-- Hidden for now: Research and Lesson Plans -->
+    <!-- <a href="research.html" aria-label="Read research materials">Research</a>
+    <a href="lessons.html" aria-label="Access lesson plans">Lesson Plans</a> -->
+    <a href="mailto:teachermrmcneal@gmail.com" aria-label="Send an email to Teacher Mr. McNeal">Email</a>
+  </nav>
+
+  <script>
+    // Configuration
+    const totalImages = 57;
+    const imageFolder = "images/";
+    const imagePrefix = "img";
+    const imageExt = ".jpg";
+
+    const carousel = document.getElementById("carousel");
+
+    let imagePaths = [];
+    for (let i = 1; i <= totalImages; i++) {
+      const num = String(i).padStart(3, '0');
+      imagePaths.push(`${imageFolder}${imagePrefix}${num}${imageExt}`);
+    }
+
+    for (let i = imagePaths.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [imagePaths[i], imagePaths[j]] = [imagePaths[j], imagePaths[i]];
+    }
+
+    imagePaths.forEach((path, index) => {
+      const img = document.createElement("img");
+      img.src = path;
+      img.alt = `Photography work ${index + 1}`;
+      if (index === 0) img.classList.add("active");
+      carousel.appendChild(img);
+    });
+
+    let currentIndex = 0;
+    const images = carousel.querySelectorAll("img");
+
+    function showNextImage() {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextImage, 5000);
+  </script>
+</body>
+</html>
