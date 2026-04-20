@@ -21,25 +21,28 @@
     .header {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* justify left */
+      align-items: flex-start;
       padding-left: 0.25em;
       padding-top: 0.25em;
       max-width: 90%;
+      position: relative;
     }
 
-    /* Title: Teacher Mr. McNeal */
+    /* Title: Teacher Mr. McNeal inline with vertical line */
     .site-name {
       font-family: 'Voltaire', sans-serif;
-      font-size: 1.6rem; /* small, subtle */
-      margin-bottom: 8px;
+      font-size: 1.6rem;
       text-align: left;
+      border-left: 4px solid #d4af37; /* gold vertical line */
+      padding-left: 12px; /* spacing from border */
+      margin-bottom: 0; /* remove gap */
     }
 
     /* Hero words block */
     .hero-block {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* left aligned */
+      align-items: flex-start;
       margin-top: 5px;
     }
 
@@ -48,8 +51,8 @@
       font-size: 2rem;
       letter-spacing: 2px;
       text-align: left;
-      border-left: 4px solid #d4af37; /* left border only */
-      padding-left: 12px; /* spacing from border */
+      border-left: 4px solid #d4af37;
+      padding-left: 12px;
     }
 
     /* Carousel container */
@@ -79,10 +82,12 @@
       z-index: 1;
     }
 
-    /* Links section */
+    /* Links section moved to top right */
     .links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
       text-align: right;
-      padding: 20px;
     }
 
     .links a {
@@ -105,7 +110,6 @@
 
     /* Responsive adjustments */
     @media (max-width: 1024px) {
-      /* Hide hero words below iPad resolution */
       .hero-block {
         display: none;
       }
@@ -117,6 +121,8 @@
       }
       .links {
         text-align: center;
+        position: static;
+        padding: 20px;
       }
       .links a {
         display: inline-block;
@@ -130,7 +136,7 @@
   <header class="header" role="banner">
     <div class="site-name">Teacher Mr. McNeal</div>
     <div class="hero-block">
-      <div class="hero-words">Focus · Impact · Insight</div>
+      <div class="hero-words">Teaching · Technologies · Travel</div>
     </div>
   </header>
 
@@ -143,8 +149,9 @@
   <nav class="links" role="navigation" aria-label="External links">
     <a href="https://www.teachermrmcneal.org/cv" aria-label="View Curriculum Vitae document">Curriculum Vitae</a>
     <a href="https://www.teachermrmcneal.org/instagram" aria-label="Visit Instagram page">Instagram</a>
-    <a href="research.html" aria-label="Read research materials">Research</a>
-    <a href="lessons.html" aria-label="Access lesson plans">Lesson Plans</a>
+    <!-- Hidden for now: Research and Lesson Plans -->
+    <!-- <a href="research.html" aria-label="Read research materials">Research</a>
+    <a href="lessons.html" aria-label="Access lesson plans">Lesson Plans</a> -->
     <a href="mailto:teachermrmcneal@gmail.com" aria-label="Send an email to Teacher Mr. McNeal">Email</a>
   </nav>
 
