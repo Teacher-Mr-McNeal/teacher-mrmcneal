@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
 Galena Outdoor Leadership & Community Stewardship Academy
 </title>
 
 <meta name="description"
-      content="2026-2027 Galena Outdoor Leadership and Community Stewardship Academy Program Framework">
+content="2026-2027 Galena Outdoor Leadership and Community Stewardship Academy Program Framework">
 
 <style>
 
 :root{
-
     --bg:#ffffff;
-    --card:#f7f7f7;
-    --text:#222222;
-    --accent:#2E7D32;
-    --accent-light:#E8F5E9;
-    --border:#dddddd;
-
+    --card:#f8f9fa;
+    --text:#1f2937;
+    --accent:#2e7d32;
+    --accent-light:#e8f5e9;
+    --border:#dcdcdc;
+    --shadow:rgba(0,0,0,.08);
 }
 
 [data-theme="dark"]{
-
     --bg:#121212;
     --card:#1f1f1f;
-    --text:#f5f5f5;
-    --accent:#66BB6A;
+    --text:#eeeeee;
+    --accent:#66bb6a;
     --accent-light:#263238;
     --border:#444444;
-
+    --shadow:rgba(255,255,255,.05);
 }
 
 *{
@@ -46,201 +42,147 @@ html{
 }
 
 body{
-
     margin:0;
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
-
+    font-family:"Segoe UI",Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
-    line-height:1.6;
-
+    line-height:1.7;
 }
 
 header{
-
     background:var(--accent);
     color:white;
-
     padding:2rem;
-
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 header h1{
-
     margin:0;
-
 }
 
-.topbar{
+header h2{
+    margin:.5rem 0;
+    font-weight:400;
+}
 
+.top-controls{
     display:flex;
     flex-wrap:wrap;
-    gap:1rem;
-    margin-top:1rem;
-
+    gap:10px;
+    margin-top:20px;
 }
 
-button{
-
+.button{
     background:white;
-    color:black;
-
+    color:#222;
     border:none;
-    border-radius:6px;
-
-    padding:.75rem 1rem;
-
+    border-radius:8px;
+    padding:.8rem 1rem;
     cursor:pointer;
-    font-weight:bold;
-
+    font-weight:600;
 }
 
-.container{
-
+.layout{
     display:flex;
-
 }
 
 .sidebar{
-
-    width:300px;
-
+    width:320px;
+    background:var(--card);
+    border-right:1px solid var(--border);
+    padding:1rem;
+    height:100vh;
+    overflow-y:auto;
     position:sticky;
     top:0;
-
-    height:100vh;
-
-    overflow:auto;
-
-    background:var(--card);
-
-    border-right:1px solid var(--border);
-
-    padding:1rem;
-
 }
 
 .sidebar h3{
-
     margin-top:0;
-
 }
 
 .sidebar a{
-
     display:block;
-
-    padding:.5rem;
-
     text-decoration:none;
-
     color:var(--text);
-
-    border-radius:5px;
-
+    padding:.75rem;
+    border-radius:8px;
+    margin-bottom:.4rem;
 }
 
 .sidebar a:hover{
-
     background:var(--accent-light);
-
 }
 
-main{
+.sidebar small{
+    display:block;
+    color:#777;
+}
 
+.content{
     flex:1;
-
     padding:2rem;
-
     max-width:1200px;
-
-}
-
-section{
-
-    margin-bottom:3rem;
-
 }
 
 .card{
-
     background:var(--card);
-
     border:1px solid var(--border);
-
-    padding:1rem;
-
     border-radius:12px;
-
+    padding:1.25rem;
+    margin-bottom:1.5rem;
+    box-shadow:0 2px 6px var(--shadow);
 }
 
 details{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
     margin-bottom:1rem;
-
-    padding:1rem;
-
+    background:var(--card);
+    border:1px solid var(--border);
     border-radius:10px;
-
+    padding:1rem;
 }
 
 summary{
-
     cursor:pointer;
-
+    font-weight:700;
     font-size:1.05rem;
-
-    font-weight:bold;
-
 }
 
 .unit-date{
-
     color:var(--accent);
-
     font-weight:bold;
+}
 
+section{
+    margin-bottom:3rem;
+}
+
+.tag{
+    display:inline-block;
+    padding:.25rem .6rem;
+    background:var(--accent-light);
+    border-radius:999px;
+    margin-right:.4rem;
+    margin-top:.3rem;
 }
 
 footer{
-
-    background:var(--card);
-
-    border-top:1px solid var(--border);
-
     text-align:center;
-
-    padding:1.5rem;
-
-}
-
-.print-only{
-
-    display:none;
-
+    padding:2rem;
+    border-top:1px solid var(--border);
+    background:var(--card);
 }
 
 @media(max-width:900px){
 
-    .container{
-
+    .layout{
         flex-direction:column;
-
     }
 
     .sidebar{
-
-        width:100%;
         position:relative;
+        width:100%;
         height:auto;
-
     }
 
 }
@@ -248,31 +190,18 @@ footer{
 @media print{
 
     .sidebar,
-    .topbar,
-    button{
-
+    .top-controls{
         display:none;
-
     }
 
     body{
-
         background:white;
-
         color:black;
-
-    }
-
-    .print-only{
-
-        display:block;
-
     }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -284,561 +213,54 @@ Galena Outdoor Leadership & Community Stewardship Academy
 </h1>
 
 <h2>
-2026-2027 School Year
+2026–2027 School Year
 </h2>
 
 <p>
-
 Learn the Land • Serve the Community • Lead the Future
-
 </p>
 
-<div class="topbar">
+<div class="top-controls">
 
-<button onclick="toggleTheme()">
-🌙 Light / Dark Mode
+<button class="button" onclick="toggleTheme()">
+Light / Dark Mode
 </button>
 
-<button onclick="window.print()">
-📄 Download PDF
+<button class="button" onclick="window.print()">
+Download PDF
 </button>
 
 </div>
 
 </header>
 
-<div class="container">
+<div class="layout">
 
-<nav class="sidebar"
-     aria-label="Academy Navigation">
+<nav class="sidebar">
 
-<h3>
-Navigation
-</h3>
+<h3>2026–2027 Units</h3>
 
-#overviewOverview</a>
-
-#calendar
-Annual Calendar
-</a>
-
-#unit1Unit 1</a>
-#unit2Unit 2</a>
-#unit3Unit 3</a>
-#unit4Unit 4</a>
-<a href="#unita>
-<a hrefnit 6</a>
-<a href="#unit7">Unit 7</it 8</a>
-#unit9Unit 9</a>
-<a href="#unit10">Unit 101Unit 11</a>
-
-#certifications
-Certifications
-</a>
-
-#future
-Future Expansion
-</a>
-
-</nav>
-
-<main>
-
-<section id="overview">
-
-<h2>
+#overview
 Academy Overview
-</h2>
-
-<div class="card">
-
-<p>
-
-The Galena Outdoor Leadership &
-Community Stewardship Academy is a
-year-long experiential learning program
-designed specifically for Interior Alaska.
-
-</p>
-
-<p>
-
-Students develop leadership,
-subsistence skills,
-outdoor competence,
-risk management abilities,
-community service habits,
-and workforce readiness.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="calendar">
-
-<h2>
-2026-2027 Annual Calendar
-</h2>
-
-<div class="card">
-
-<ul>
-
-<li><strong>Aug 24 - Sep 4, 2026</strong> | Academy Launch</li>
-
-<li><strong>Sep 5 - Sep 7, 2026</strong> | Labor Day Leadership Expedition</li>
-
-<li><strong>Sep 8 - Oct 2, 2026</strong> | Campcraft & Pole Fishing</li>
-
-<li><strong>Oct 5 - Oct 30, 2026</strong> | Navigation & Yukon Geography</li>
-
-<li><strong>Nov 2 - Dec 4, 2026</strong> | Small Engines & Maintenance</li>
-
-<li><strong>Dec 7, 2026 - Jan 8, 2027</strong> | Winter Survival</li>
-
-<li><strong>Jan 11 - Feb 5, 2027</strong> | Blackfish Unit</li>
-
-<li><strong>Feb 8 - Mar 5, 2027</strong> | Burbot Ecology</li>
-
-<li><strong>Mar 8 - Apr 2, 2027</strong> | Snowmachine Operations</li>
-
-<li><strong>Apr 5 - Apr 30, 2027</strong> | Community Stewardship Corps</li>
-
-<li><strong>May 3 - May 7, 2027</strong> | Capstone Showcase Week</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="unit1">
-
-<details open>
-
-<summary>
-Unit 1: Academy Launch & Camp Planning
-</summary>
-
-<p class="unit-date">
-
-August 24, 2026 – September 4, 2026
-
-</p>
-
-<ul>
-
-<li>Orientation</li>
-<li>Leadership Development</li>
-<li>Website Creation</li>
-<li>Team Building</li>
-<li>Camp Planning</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit2">
-
-<details>
-
-<summary>
-Unit 2: Labor Day Leadership Expedition
-</summary>
-
-<p class="unit-date">
-
-September 5 – 7, 2026
-
-</p>
-
-<ul>
-
-<li>Leadership Rotations</li>
-<li>Camp Setup</li>
-<li>Outdoor Cooking</li>
-<li>Fire Building</li>
-<li>Leave No Trace</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit3">
-
-<details>
-
-<summary>
-Unit 3: Campcraft & Pole Fishing
-</summary>
-
-<p class="unit-date">
-
-September 8 – October 2, 2026
-
-</p>
-
-<ul>
-
-<li>Campcraft</li>
-<li>Tool Safety</li>
-<li>Pole Fishing</li>
-<li>Fish Identification</li>
-<li>Fish Cleaning</li>
-<li>Ethical Harvest</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit4">
-
-<details>
-
-<summary>
-Unit 4: Navigation & Yukon Geography
-</summary>
-
-<p class="unit-date">
-
-October 5 – October 30, 2026
-
-</p>
-
-<ul>
-
-<li>Maps</li>
-<li>Compass</li>
-<li>GPS</li>
-<li>Route Planning</li>
-<li>Community Mapping</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit5">
-
-<details>
-
-<summary>
-Unit 5: Small Engines & Snowmachine Maintenance
-</summary>
-
-<p class="unit-date">
-
-November 2 – December 4, 2026
-
-</p>
-
-<ul>
-
-<li>Tool Safety</li>
-<li>Engine Systems</li>
-<li>Maintenance</li>
-<li>Troubleshooting</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit6">
-
-<details>
-
-<summary>
-Unit 6: Winter Survival & Risk Management
-</summary>
-
-<p class="unit-date">
-
-December 7, 2026 – January 8, 2027
-
-</p>
-
-<ul>
-
-<li>Layering Systems</li>
-<li>Shelter Building</li>
-<li>Winter Fire Building</li>
-<li>Emergency Planning</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit7">
-
-<details>
-
-<summary>
-Unit 7: Blackfish Subsistence Unit
-</summary>
-
-<p class="unit-date">
-
-January 11 – February 5, 2027
-
-</p>
-
-<ul>
-
-<li>Ice Safety</li>
-<li>Blackfish Ecology</li>
-<li>Harvest Techniques</li>
-<li>Processing</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit8">
-
-<details>
-
-<summary>
-Unit 8: Burbot Ecology & Ice Fishing
-</summary>
-
-<p class="unit-date">
-
-February 8 – March 5, 2027
-
-</p>
-
-<ul>
-
-<li>Burbot Biology</li>
-<li>Ice Fishing</li>
-<li>Processing</li>
-<li>Winter Ecology</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit9">
-
-<details>
-
-<summary>
-Unit 9: Snowmachine Operations
-</summary>
-
-<p class="unit-date">
-
-March 8 – April 2, 2027
-
-</p>
-
-<ul>
-
-<li>Inspection</li>
-<li>Recovery Skills</li>
-<li>Trail Ethics</li>
-<li>Safety</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit10">
-
-<details>
-
-<summary>
-Unit 10: Community Stewardship Corps
-</summary>
-
-<p class="unit-date">
-
-April 5 – April 30, 2027
-
-</p>
-
-<ul>
-
-<li>Fire Pit Rebuild</li>
-<li>Firewood Projects</li>
-<li>Elder Assistance</li>
-<li>Trail Improvements</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="unit11">
-
-<details>
-
-<summary>
-Unit 11: Capstone Showcase Week
-</summary>
-
-<p class="unit-date">
-
-May 3 – May 7, 2027
-
-</p>
-
-<ul>
-
-<li>Portfolio Completion</li>
-<li>Community Presentation</li>
-<li>Certification Review</li>
-
-</ul>
-
-</details>
-
-</section>
-
-<section id="certifications">
-
-<h2>
-Certification Framework
-</h2>
-
-<div class="card">
-
-<ul>
-
-<li><strong>Bronze</strong> – Campcraft, Fire Building, Navigation</li>
-
-<li><strong>Silver</strong> – Winter Survival, Ice Safety, Service</li>
-
-<li><strong>Gold</strong> – Leadership and Major Project Participation</li>
-
-<li><strong>Platinum</strong> – Capstone & Community Impact</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="future">
-
-<h2>
-Future Expansion
-</h2>
-
-<div class="card">
-
-<p>
-
-Future additions may include:
-
-</p>
-
-<ul>
-
-<li>Full Curriculum Framework</li>
-<li>Lesson Library</li>
-<li>Student Portfolios</li>
-<li>Community Project Archive</li>
-<li>Assessment Dashboard</li>
-<li>Alaska Standards Alignment</li>
-
-</ul>
-
-</div>
-
-</section>
-
-</main>
-
-</div>
-
-<footer>
-
-<p>
-
-© 2026-2027 Ryan McNeal
-
-</p>
-
-<p>
-
-Galena Outdoor Leadership &
-Community Stewardship Academy
-
-</p>
-
-</footer>
-
-<script>
-
-function toggleTheme(){
-
-    const current =
-        document.documentElement.getAttribute(
-        "data-theme"
-        );
-
-    if(current === "dark"){
-
-        document.documentElement.setAttribute(
-            "data-theme",
-            "light"
-        );
-
-        localStorage.setItem(
-            "theme",
-            "light"
-        );
-
-    } else {
-
-        document.documentElement.setAttribute(
-            "data-theme",
-            "dark"
-        );
-
-        localStorage.setItem(
-            "theme",
-            "dark"
-        );
-
-    }
-
-}
-
-const savedTheme =
-    localStorage.getItem("theme");
-
-if(savedTheme){
-
-    document.documentElement.setAttribute(
-        "data-theme",
-        savedTheme
-    );
-
-}
-
-</script>
-
-</body>
-</html>
+</a>
+
+<hr>
+
+#unit1
+Unit 1
+<small>Aug 24 - Sep 4, 2026</small>
+</a>
+
+#unit2
+Unit 2
+<small>Sep 5 - Sep 7, 2026</small>
+</a>
+
+#unit3
+Unit 3
+<small>Sep 8 - Oct 2, 2026</small>
+</a>
+
+#unit4
+Unit 4
+<small>Oct 5
