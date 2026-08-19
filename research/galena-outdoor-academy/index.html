@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,28 +11,32 @@ Galena Outdoor Leadership & Community Stewardship Academy
 </title>
 
 <meta name="description"
-content="2026-2027 Galena Outdoor Leadership and Community Stewardship Academy Program Framework">
+content="2026-2027 Galena Outdoor Leadership and Community Stewardship Academy">
 
 <style>
 
 :root{
+
     --bg:#ffffff;
-    --card:#f8f9fa;
-    --text:#1f2937;
-    --accent:#2e7d32;
-    --accent-light:#e8f5e9;
-    --border:#dcdcdc;
-    --shadow:rgba(0,0,0,.08);
+    --text:#222222;
+    --card:#f5f5f5;
+    --border:#d9d9d9;
+
+    --accent:#2E7D32;
+    --accent-light:#E8F5E9;
+
 }
 
 [data-theme="dark"]{
+
     --bg:#121212;
-    --card:#1f1f1f;
     --text:#eeeeee;
-    --accent:#66bb6a;
-    --accent-light:#263238;
+    --card:#1f1f1f;
     --border:#444444;
-    --shadow:rgba(255,255,255,.05);
+
+    --accent:#66BB6A;
+    --accent-light:#263238;
+
 }
 
 *{
@@ -42,166 +48,158 @@ html{
 }
 
 body{
+
     margin:0;
-    font-family:"Segoe UI",Arial,sans-serif;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
     background:var(--bg);
+
     color:var(--text);
-    line-height:1.7;
+
 }
 
 header{
+
     background:var(--accent);
+
     color:white;
+
     padding:2rem;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
 }
 
 header h1{
     margin:0;
 }
 
-header h2{
-    margin:.5rem 0;
-    font-weight:400;
+.controls{
+
+    margin-top:1rem;
+
 }
 
-.top-controls{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
+.controls button{
 
-.button{
-    background:white;
-    color:#222;
+    padding:.75rem 1rem;
+
     border:none;
+
     border-radius:8px;
-    padding:.8rem 1rem;
+
     cursor:pointer;
-    font-weight:600;
+
+    margin-right:10px;
+
 }
 
 .layout{
+
     display:flex;
+
 }
 
 .sidebar{
-    width:320px;
+
+    width:340px;
+
     background:var(--card);
+
     border-right:1px solid var(--border);
+
     padding:1rem;
-    height:100vh;
-    overflow-y:auto;
+
     position:sticky;
+
     top:0;
+
+    height:100vh;
+
+    overflow-y:auto;
+
 }
 
 .sidebar h3{
+
     margin-top:0;
+
 }
 
 .sidebar a{
+
     display:block;
+
     text-decoration:none;
+
     color:var(--text);
+
     padding:.75rem;
+
+    margin-bottom:.3rem;
+
     border-radius:8px;
-    margin-bottom:.4rem;
+
 }
 
 .sidebar a:hover{
+
     background:var(--accent-light);
+
 }
 
 .sidebar small{
+
     display:block;
-    color:#777;
+
+    opacity:.75;
+
 }
 
 .content{
+
     flex:1;
+
     padding:2rem;
-    max-width:1200px;
+
 }
 
 .card{
+
     background:var(--card);
+
     border:1px solid var(--border);
+
     border-radius:12px;
-    padding:1.25rem;
-    margin-bottom:1.5rem;
-    box-shadow:0 2px 6px var(--shadow);
-}
 
-details{
-    margin-bottom:1rem;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:1rem;
-}
+    padding:1.5rem;
 
-summary{
-    cursor:pointer;
-    font-weight:700;
-    font-size:1.05rem;
-}
-
-.unit-date{
-    color:var(--accent);
-    font-weight:bold;
-}
-
-section{
-    margin-bottom:3rem;
-}
-
-.tag{
-    display:inline-block;
-    padding:.25rem .6rem;
-    background:var(--accent-light);
-    border-radius:999px;
-    margin-right:.4rem;
-    margin-top:.3rem;
-}
-
-footer{
-    text-align:center;
-    padding:2rem;
-    border-top:1px solid var(--border);
-    background:var(--card);
 }
 
 @media(max-width:900px){
 
     .layout{
+
         flex-direction:column;
+
     }
 
     .sidebar{
-        position:relative;
+
         width:100%;
+
+        position:relative;
+
         height:auto;
-    }
 
-}
-
-@media print{
-
-    .sidebar,
-    .top-controls{
-        display:none;
-    }
-
-    body{
-        background:white;
-        color:black;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -209,24 +207,25 @@ footer{
 <header>
 
 <h1>
-Galena Outdoor Leadership & Community Stewardship Academy
+
+Galena Outdoor Leadership &
+Community Stewardship Academy
+
 </h1>
 
-<h2>
-2026–2027 School Year
-</h2>
-
 <p>
-Learn the Land • Serve the Community • Lead the Future
+
+2026-2027 School Year
+
 </p>
 
-<div class="top-controls">
+<div class="controls">
 
-<button class="button" onclick="toggleTheme()">
+<button onclick="toggleTheme()">
 Light / Dark Mode
 </button>
 
-<button class="button" onclick="window.print()">
+<button onclick="window.print()">
 Download PDF
 </button>
 
@@ -238,29 +237,703 @@ Download PDF
 
 <nav class="sidebar">
 
-<h3>2026–2027 Units</h3>
+<h3>
+2026-2027 Program
+</h3>
 
-#overview
+<a href="#overview">
 Academy Overview
 </a>
 
 <hr>
 
-#unit1
+<a href="#unit1">
+
+<strong>
 Unit 1
-<small>Aug 24 - Sep 4, 2026</small>
+</strong>
+
+<small>
+Aug 24 - Sep 4, 2026
+</small>
+
 </a>
 
-#unit2
+<a href="#unit2">
+
+<strong>
 Unit 2
-<small>Sep 5 - Sep 7, 2026</small>
+</strong>
+
+<small>
+Sep 5 - Sep 7, 2026
+</small>
+
 </a>
 
-#unit3
+<a href="#unit3">
+
+<strong>
 Unit 3
-<small>Sep 8 - Oct 2, 2026</small>
+</strong>
+
+<small>
+Sep 8 - Oct 2, 2026
+</small>
+
 </a>
 
-#unit4
+<a href="#unit4">
+
+<strong>
 Unit 4
-<small>Oct 5
+</strong>
+
+<small>
+Oct 5 - Oct 30, 2026
+</small>
+
+</a>
+
+<a href="#unit5">
+
+<strong>
+Unit 5
+</strong>
+
+<small>
+Nov 2 - Dec 4, 2026
+</small>
+
+</a>
+
+<a href="#unit6">
+
+<strong>
+Unit 6
+</strong>
+
+<small>
+Dec 7, 2026 - Jan 8, 2027
+</small>
+
+</a>
+
+<a href="#unit7">
+
+<strong>
+Unit 7
+</strong>
+
+<small>
+Jan 11 - Feb 5, 2027
+</small>
+
+</a>
+
+<a href="#unit8">
+
+<strong>
+Unit 8
+</strong>
+
+<small>
+Feb 8 - Mar 5, 2027
+</small>
+
+</a>
+
+<a href="#unit9">
+
+<strong>
+Unit 9
+</strong>
+
+<small>
+Mar 8 - Apr 2, 2027
+</small>
+
+</a>
+
+<a href="#unit10">
+
+<strong>
+Unit 10
+</strong>
+
+<small>
+Apr 5 - Apr 30, 2027
+</small>
+
+</a>
+
+<a href="#unit11">
+
+<strong>
+Unit 11
+</strong>
+
+<small>
+May 3 - May 7, 2027
+</small>
+
+</a>
+
+<hr>
+
+<a href="#certifications">
+Certification Framework
+</a>
+
+<a href="#future">
+Future Development
+</a>
+
+<hr>
+
+<h3>
+Contact
+</h3>
+
+<a href="mailto:teachermrmcneal@gmail.com">
+teachermrmcneal@gmail.com
+</a>
+
+</nav>
+
+<main class="content">
+
+<section id="overview">
+
+<div class="card">
+
+<h2>Academy Overview</h2>
+
+<p>
+The Galena Outdoor Leadership & Community Stewardship Academy is a year-long experiential learning program designed specifically for Interior Alaska. The academy combines outdoor leadership, service learning, subsistence skills, winter survival, technical skills, project management, and career readiness through field-based experiences and community projects.
+</p>
+
+<p>
+The Year 1 implementation (2026-2027) is intentionally designed to balance program development while completing doctoral studies. The emphasis is on building a sustainable foundation that can grow into a district model while producing measurable outcomes for students and the Galena community.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Year At A Glance</h2>
+
+<ul>
+
+<li><strong>August:</strong> Academy Launch & Camp Planning</li>
+
+<li><strong>September:</strong> Labor Day Expedition & Pole Fishing</li>
+
+<li><strong>October:</strong> Navigation & Yukon Geography</li>
+
+<li><strong>November:</strong> Small Engines & Snowmachine Maintenance</li>
+
+<li><strong>December:</strong> Winter Survival & Risk Management</li>
+
+<li><strong>January:</strong> Blackfish Subsistence Unit</li>
+
+<li><strong>February:</strong> Burbot Ecology & Ice Fishing</li>
+
+<li><strong>March:</strong> Snowmachine Operations</li>
+
+<li><strong>April:</strong> Community Stewardship Corps</li>
+
+<li><strong>May:</strong> Capstone Showcase Week</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="unit1">
+
+<details open>
+
+<summary>Unit 1: Academy Launch & Camp Planning</summary>
+
+<p class="unit-date">
+August 24 – September 4, 2026
+</p>
+
+<h3>Focus</h3>
+
+<ul>
+<li>Program orientation</li>
+<li>Leadership development</li>
+<li>Website creation</li>
+<li>Team building</li>
+<li>Camp preparation</li>
+<li>Gear readiness</li>
+</ul>
+
+<h3>Student Deliverables</h3>
+
+<ul>
+<li>Personal Leadership Website</li>
+<li>Personal Goal Statement</li>
+<li>Camp Team Assignment</li>
+<li>Gear Checklist</li>
+</ul>
+
+</details>
+
+</section>
+
+<section id="unit2">
+
+<details>
+
+<summary>Unit 2: Labor Day Leadership Expedition</summary>
+
+<p class="unit-date">
+September 5 – September 7, 2026
+</p>
+
+<h3>Focus</h3>
+
+<ul>
+<li>Camp setup</li>
+<li>Outdoor cooking</li>
+<li>Fire building</li>
+<li>Leadership rotations</li>
+<li>Leave No Trace</li>
+</ul>
+
+<h3>Student Deliverables</h3>
+
+<ul>
+<li>Expedition Reflection</li>
+<li>Camp Story Page</li>
+<li>Photo Documentation</li>
+</ul>
+
+</details>
+
+</section>
+
+<section id="unit3">
+
+<details>
+
+<summary>Unit 3: Campcraft & Pole Fishing</summary>
+
+<p class="unit-date">
+September 8 – October 2, 2026
+</p>
+
+<h3>Campcraft Topics</h3>
+
+<ul>
+<li>Tool Safety</li>
+<li>Fire Building</li>
+<li>Outdoor Cooking</li>
+<li>Camp Organization</li>
+<li>Firewood Processing</li>
+</ul>
+
+<h3>Pole Fishing Topics</h3>
+
+<ul>
+<li>Rod & Reel Fundamentals</li>
+<li>Casting Techniques</li>
+<li>Species Identification</li>
+<li>Fish Handling</li>
+<li>Fish Cleaning</li>
+<li>Preservation Techniques</li>
+<li>Ethical Harvest</li>
+</ul>
+
+<h3>Species Focus</h3>
+
+<ul>
+<li>Northern Pike</li>
+<li>Arctic Grayling</li>
+<li>Whitefish</li>
+<li>Sheefish</li>
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Galena Fishing Guide Website
+</p>
+
+</details>
+
+</section>
+
+<section id="unit4">
+
+<details>
+
+<summary>Unit 4: Navigation & Yukon Geography</summary>
+
+<p class="unit-date">
+October 5 – October 30, 2026
+</p>
+
+<ul>
+
+<li>Topographic Maps</li>
+<li>Compass Navigation</li>
+<li>GPS Skills</li>
+<li>Route Planning</li>
+<li>Community Mapping</li>
+<li>Yukon River Geography</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Interactive Galena Outdoor Recreation Map
+</p>
+
+</details>
+
+</section>
+
+<section id="unit5">
+
+<details>
+
+<summary>Unit 5: Small Engines & Snowmachine Maintenance</summary>
+
+<p class="unit-date">
+November 2 – December 4, 2026
+</p>
+
+<ul>
+
+<li>Shop Safety</li>
+<li>Tool Identification</li>
+<li>Engine Components</li>
+<li>Fuel Systems</li>
+<li>Spark Plugs</li>
+<li>Preventive Maintenance</li>
+<li>Troubleshooting</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Snowmachine Fleet Assessment Report
+</p>
+
+</details>
+
+</section>
+
+<section id="unit6">
+
+<details>
+
+<summary>Unit 6: Winter Survival & Risk Management</summary>
+
+<p class="unit-date">
+December 7, 2026 – January 8, 2027
+</p>
+
+<ul>
+
+<li>Layering Systems</li>
+<li>Cold Weather Readiness</li>
+<li>Shelter Construction</li>
+<li>Fire Building in Winter</li>
+<li>Emergency Planning</li>
+<li>Hypothermia Prevention</li>
+<li>Frostbite Prevention</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Galena Winter Survival Guide
+</p>
+
+</details>
+
+</section>
+
+<section id="unit7">
+
+<details>
+
+<summary>Unit 7: Blackfish Subsistence Unit</summary>
+
+<p class="unit-date">
+January 11 – February 5, 2027
+</p>
+
+<ul>
+
+<li>Ice Safety</li>
+<li>Blackfish Ecology</li>
+<li>Traditional Knowledge</li>
+<li>Harvest Ethics</li>
+<li>Fish Processing</li>
+<li>Resource Stewardship</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Blackfish Resource Website
+</p>
+
+</details>
+
+</section>
+
+<section id="unit8">
+
+<details>
+
+<summary>Unit 8: Burbot Ecology & Ice Fishing</summary>
+
+<p class="unit-date">
+February 8 – March 5, 2027
+</p>
+
+<ul>
+
+<li>Burbot Biology</li>
+<li>Winter Ecology</li>
+<li>Ice Fishing Techniques</li>
+<li>Fish Processing</li>
+<li>Species Documentation</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Burbot Field Guide
+</p>
+
+</details>
+
+</section>
+
+<section id="unit9">
+
+<details>
+
+<summary>Unit 9: Snowmachine Operations</summary>
+
+<p class="unit-date">
+March 8 – April 2, 2027
+</p>
+
+<ul>
+
+<li>Pre-Trip Inspections</li>
+<li>Route Planning</li>
+<li>Safe Operations</li>
+<li>Trail Etiquette</li>
+<li>Towing Procedures</li>
+<li>Field Recovery</li>
+
+</ul>
+
+<h3>Student Deliverable</h3>
+
+<p>
+Student-Written Snowmachine Safety Manual
+</p>
+
+</details>
+
+</section>
+
+<section id="unit10">
+
+<details>
+
+<summary>Unit 10: Community Stewardship Corps</summary>
+
+<p class="unit-date">
+April 5 – April 30, 2027
+</p>
+
+<h3>Project Areas</h3>
+
+<ul>
+
+<li>Fire Pit Reconstruction</li>
+<li>Firewood Projects</li>
+<li>Elder Assistance</li>
+<li>Trail Improvements</li>
+<li>Community Cleanup</li>
+<li>Outdoor Classroom Improvements</li>
+
+</ul>
+
+<h3>Required Deliverables</h3>
+
+<ul>
+
+<li>Project Charter</li>
+<li>Before Photos</li>
+<li>After Photos</li>
+<li>Impact Report</li>
+<li>Reflection</li>
+
+</ul>
+
+</details>
+
+</section>
+
+<section id="unit11">
+
+<details>
+
+<summary>Unit 11: Capstone Showcase Week</summary>
+
+<p class="unit-date">
+May 3 – May 7, 2027
+</p>
+
+<ul>
+
+<li>Portfolio Completion</li>
+<li>Website Finalization</li>
+<li>Certification Reviews</li>
+<li>Community Presentations</li>
+<li>Awards Ceremony</li>
+
+</ul>
+
+<h3>Final Product</h3>
+
+<p>
+Professional Outdoor Leadership Portfolio Website
+</p>
+
+</details>
+
+</section>
+
+<section id="certifications">
+
+<div class="card">
+
+<h2>Certification Framework</h2>
+
+<h3>Bronze Outdoor Leader</h3>
+
+<ul>
+<li>Campcraft</li>
+<li>Basic Navigation</li>
+<li>Fire Building</li>
+<li>Website Creation</li>
+</ul>
+
+<h3>Silver Outdoor Leader</h3>
+
+<ul>
+<li>Winter Survival</li>
+<li>Ice Safety</li>
+<li>Community Service Participation</li>
+</ul>
+
+<h3>Gold Outdoor Leader</h3>
+
+<ul>
+<li>Leadership</li>
+<li>Major Project Participation</li>
+<li>Public Documentation</li>
+</ul>
+
+<h3>Platinum Outdoor Leader</h3>
+
+<ul>
+<li>Capstone Project</li>
+<li>Community Impact Project</li>
+<li>Mentorship</li>
+<li>Portfolio Defense</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="future">
+
+<div class="card">
+
+<h2>Future Development</h2>
+
+<ul>
+
+<li>Alaska Standards Alignment</li>
+<li>Detailed Lesson Library</li>
+<li>Risk Management Manual</li>
+<li>Community Project Archive</li>
+<li>Student Portfolio Examples</li>
+<li>Equipment Inventory Dashboard</li>
+<li>Program Evaluation Metrics</li>
+<li>Annual Impact Reports</li>
+
+</ul>
+
+</div>
+
+</section>
+</main>
+
+</div>
+
+<script>
+
+function toggleTheme(){
+
+    const current =
+    document.documentElement
+    .getAttribute("data-theme");
+
+    if(current === "dark"){
+
+        document.documentElement
+        .setAttribute("data-theme","light");
+
+        localStorage
+        .setItem("theme","light");
+
+    }else{
+
+        document.documentElement
+        .setAttribute("data-theme","dark");
+
+        localStorage
+        .setItem("theme","dark");
+
+    }
+
+}
+
+const savedTheme =
+localStorage.getItem("theme");
+
+if(savedTheme){
+
+    document.documentElement
+    .setAttribute("data-theme",savedTheme);
+
+}
+
+</script>
+
+</body>
+
+</html>
