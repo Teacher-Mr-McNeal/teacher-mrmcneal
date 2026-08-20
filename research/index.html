@@ -1,181 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Learning Progression K–12</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      background-color: #fdfdfd;
-      color: #222;
-      margin: 2rem;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Ryan McNeal</title>
+
+<style>
+:root{
+    --primary:#234b6b;
+    --secondary:#4f7ea8;
+    --accent:#c6984c;
+    --light:#f7f9fb;
+    --dark:#222222;
+    --white:#ffffff;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    color:var(--dark);
+    background:var(--white);
+    line-height:1.7;
+}
+
+.hero{
+    background:
+        linear-gradient(rgba(35,75,107,.85), rgba(35,75,107,.85)),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:8rem 1.5rem;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:1rem;
+}
+
+.hero p{
+    max-width:800px;
+    margin:0 auto;
+    font-size:1.2rem;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:4rem 1.5rem;
+}
+
+.section-title{
+    color:var(--primary);
+    font-size:2rem;
+    margin-bottom:2rem;
+    border-bottom:4px solid var(--accent);
+    display:inline-block;
+    padding-bottom:.5rem;
+}
+
+.year{
+    color:var(--secondary);
+    font-size:1.8rem;
+    margin-top:3rem;
+    margin-bottom:1.5rem;
+}
+
+.project{
+    background:var(--light);
+    border-left:6px solid var(--accent);
+    border-radius:10px;
+    padding:1.75rem;
+    margin-bottom:1.5rem;
+    transition:all .2s ease;
+}
+
+.project:hover{
+    transform:translateY(-2px);
+}
+
+.project h3{
+    color:var(--primary);
+    margin-bottom:.5rem;
+}
+
+.meta{
+    color:#666;
+    font-size:.95rem;
+    margin-bottom:1rem;
+}
+
+.project a{
+    color:var(--secondary);
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.project a:hover{
+    text-decoration:underline;
+}
+
+.interests-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+}
+
+.interest{
+    background:var(--light);
+    padding:1rem;
+    border-radius:8px;
+}
+
+.author{
+    background:var(--light);
+    padding:2rem;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:2rem;
+    margin-top:4rem;
+    background:#eef2f5;
+    color:#555;
+}
+
+@media (max-width:768px){
+
+    .hero{
+        padding:6rem 1rem;
     }
-    h1 {
-      font-size: 2rem;
-      color: #004080;
-      text-align: center;
-      margin-bottom: 1.5rem;
+
+    .hero p{
+        font-size:1rem;
     }
-    h2 {
-      font-size: 1.5rem;
-      color: #003366;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background-color: #004080;
-      color: #fff;
-      font-weight: bold;
-    }
-    tr:nth-child(even) {
-      background-color: #e6f0fa;
-    }
-    td strong {
-      display: block;
-      font-size: 1rem;
-      color: #003366;
-      margin-bottom: 0.25rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 2rem;
-    }
-    footer a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #004080;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    footer a:hover {
-      background-color: #0066cc;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <h1>Learning Progression by Grade Level (K–12)</h1>
 
-  <!-- Section 1: K–8 -->
-  <h2>Learning Progression (K–8)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Grade</th>
-        <th scope="col">Focus of Learning (Expanded)</th>
-        <th scope="col">Example Skills/Concepts (STEM/CS/Engineering included)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>K&nbsp;<br>(5–6 yr)</td>
-        <td><strong>Identifying, Naming, and Sorting</strong><br>Building awareness of objects, symbols, and categories</td>
-        <td>Sort blocks by size/type; recognize shapes/colors; identify basic machine parts (wheel, lever)</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;1<br>(6–7 yr)</td>
-        <td><strong>Classifying and Comparing</strong><br>Grouping items and noticing similarities/differences</td>
-        <td>Group plants vs. animals; compare lengths; sink or float experiment; basic coding patterns (move forward, turn)</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;2<br>(7–8 yr)</td>
-        <td><strong>Describing and Sequencing</strong><br>Articulating features and ordering events logically</td>
-        <td>Sequence daily routines; explain simple cause/effect; follow step-by-step instructions to build with LEGO/robot kits; describe simple algorithms (first, then, next)</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;3<br>(8–9 yr)</td>
-        <td><strong>Explaining Relationships</strong><br>Connecting ideas and recognizing interdependence</td>
-        <td>Explain food chains; connect math patterns; understand circuits (battery → bulb); link input/output in computers</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;4<br>(9–10 yr)</td>
-        <td><strong>Forming Hypotheses and Predictions</strong><br>Imagining possible outcomes and testing ideas</td>
-        <td>Predict plant growth; design simple experiments; test bridge strength with different materials; predict computer program outcomes</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;5<br>(10–11 yr)</td>
-        <td><strong>Recognizing Correlation and Patterns</strong><br>Noticing connections between phenomena</td>
-        <td>Understand moon-tide relationship; distinguish correlation vs. causation; analyze weather data for patterns; spot trends in coding loops</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;6<br>(11–12 yr)</td>
-        <td><strong>Analyzing and Interpreting Data</strong><br>Using evidence to draw conclusions</td>
-        <td>Read charts/graphs; compare variables; interpret sensor data (temperature, motion); debug simple programs</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;7<br>(12–13 yr)</td>
-        <td><strong>Evaluating and Arguing with Evidence</strong><br>Critiquing sources and defending positions</td>
-        <td>Assess reliability of information; construct arguments; evaluate design trade-offs (cost vs. strength); argue efficiency of algorithms</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;8<br>(13–14 yr)</td>
-        <td><strong>Designing, Innovating, and Synthesizing</strong><br>Creating new solutions and integrating knowledge</td>
-        <td>Plan experiments; propose solutions; design prototypes (bridges, apps, robots); integrate coding + science (simulate ecosystems)</td>
-      </tr>
-    </tbody>
-  </table>
-  <footer>
-    © www.teachermrmcneal.org <br>
-    <a href="Learning Progression by Grade Level (K–8) (1).pdf" download>
-      Download K–8 PDF
-    </a>
-  </footer>
+<header class="hero">
+    <h1>Learning Beyond the Classroom</h1>
 
-  <!-- Section 2: Grades 7–12 -->
-  <h2>Learning Progression (Grades 7–12)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Grade</th>
-        <th scope="col">Focus of Learning (Expanded)</th>
-        <th scope="col">Example Skills/Concepts (STEM/CS/Engineering included)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Grade&nbsp;7<br>(12–13 yr)</td>
-        <td><strong>Evaluating and Arguing with Evidence</strong><br>Critiquing sources, weighing trade-offs, and defending positions</td>
-        <td>Assess reliability of online data; construct evidence-based arguments; evaluate design trade-offs (cost vs. efficiency); argue efficiency of search vs. sort algorithms</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;8<br>(13–14 yr)</td>
-        <td><strong>Designing, Innovating, and Synthesizing</strong><br>Creating new solutions and integrating knowledge</td>
-        <td>Plan controlled experiments; propose solutions to community problems; design prototypes (apps, robots, bridges); integrate coding + science (simulate ecosystems)</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;9<br>(14–15 yr)</td>
-        <td><strong>Modeling and Abstract Thinking</strong><br>Applying symbolic reasoning to represent complex systems</td>
-        <td>Build algebraic models; simulate population growth; use CAD software for design; write pseudocode for algorithms; explore Boolean logic in circuits</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;10<br>(15–16 yr)</td>
-        <td><strong>Investigating Systems and Complexity</strong><br>Analyzing interactions within dynamic systems</td>
-        <td>Study ecological networks; analyze supply chain logistics; model chemical reactions; explore recursion in programming; test mechanical systems under stress</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;11<br>(16–17 yr)</td>
-        <td><strong>Researching and Applying Theory</strong><br>Connecting academic frameworks to practical inquiry</td>
-        <td>Conduct independent research projects; apply statistical methods; analyze encryption algorithms; design engineering solutions with constraints; critique scientific papers</td>
-      </tr>
-      <tr>
-        <td>Grade&nbsp;12<br>(17–18 yr)</td>
-        <td><strong>Synthesizing, Leading, and Innovating</strong><br>Integrating disciplines to propose original contributions</td>
-        <td>Capstone projects; design sustainable technologies; lead collaborative coding projects; integrate AI + ethics discussions
+    <p>
+        Research, Resources, and Program Development in
+        Experiential and Outdoor Education
+    </p>
+</header>
+
+<main class="container">
+
+<section>
+
+<h2 class="section-title">
+Professional Contributions &amp; Research
+</h2>
+
+<!-- ===================================================== -->
+<!-- START 2027 -->
+<!-- ===================================================== -->
+
+<h3 class="year">2027</h3>
+
+<article class="project">
+
+<h3>Outdoor Education Manual for Alaska</h3>
+
+<p class="meta">
+Galena City School District • Outdoor Education • 2027
+</p>
+
+<p>
+A comprehensive framework for implementing place-based outdoor
+education programs across Alaska. The manual emphasizes
+experiential learning, environmental stewardship, safety,
+risk management, and culturally responsive educational practices.
+</p>
+
+<p>
+<a href="https://www.teachermrmcneal.org/galiew Project →
+</a>
+</p>
+
+</article>
+
+<article class="project">
+
+<h3>Experiential Learning Progression by Grade Level</h3>
+
+<p class="meta">
+Galena City School District • Curriculum Framework • 2027
+</p>
+
+<p>
+A developmental progression describing experiential learning
+competencies and outcomes across grade bands, helping schools
+align outdoor and experiential learning experiences from
+elementary through secondary levels.
+</p>
+
+<p>
+<a href="https://www.teachermrmcneal.org">
+View Project →
+</a>
+</p>
+
+</article>
+
+<!-- ===================================================== -->
+<!-- END 2027 -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- START 2026 -->
+<!-- ===================================================== -->
+
+<h3 class="year">2026</h3>
+
+<article class="project">
+
+<h3>Experiential Learning Operations Manual</h3>
+
+<p class="meta">
+Canadian International School • Program Development • 2026
+</p>
+
+<p>
+A comprehensive operational guide for the implementation and
+management of experiential learning programs, including planning
+protocols, logistics, risk management procedures, staffing
+practices, and educational outcomes.
+</p>
+
+<p>
+<a href="https://docs.google.com/document/d/1tDkMbGNOPHnzHOIzbMlBQG5OVf6gtusY8Qig35WWnqc/edit?usp=drive_link"
+target="_blank"
+rel="noopener noreferrer">
+View Document →
+</a>
+</p>
+
+</article>
+
+<!-- ===================================================== -->
+<!-- END 2026 -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- START 2025 -->
+<!-- ===================================================== -->
+
+<h3 class="year">2025</h3>
+
+<article class="project">
+
+<h3>Grade 5 Mysore Learning Expedition</h3>
+
+<p class="meta">
+Canadian International School • Experiential Learning • 2025
+</p>
+
+<p>
+A multi-day learning expedition designed to immerse students in
+the cultural, historical, environmental, and social dimensions
+of Mysore through authentic inquiry, reflection, leadership,
+and interdisciplinary learning experiences.
+</p>
+
+<p>
+<a href="https://sites.google.com/cisb.org.in/grade5trip/home"
+target="_blank"
+rel="noopener noreferrer">
+Visit Website →
+</a>
+</p>
+
+</article>
+
+<!-- ===================================================== -->
+<!-- END 2025 -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- START 2024 -->
+<!-- ===================================================== -->
+
+<h3 class="year">2024</h3>
+
+<article class="project">
+
+<h3>Grade 4 Hampi Learning Expedition</h3>
+
+<p class="meta">
+Canadian International School • Field Studies • 2024
+</p>
+
+<p>
+An immersive field experience introducing students to the
+history, geography, culture, and heritage of Hampi through
+a structured experiential learning model and place-based
+educational approach.
+</p>
+
+<p>
+<a href="https://sites.google.com/cisb.org.in/2024-cis-g4-camp/start-here?authuser=0"
+target="_blank"
+rel="noopener noreferrer">
+Visit Website →
+</a>
+</p>
+
+</article>
+
+<!-- ===================================================== -->
+<!-- END 2024 -->
+<!-- ===================================================== -->
+
+</section>
+
+<section style="margin-top:4rem;">
+
+<h2 class="section-title">
+Research Interests
+</h2>
+
+<div class="interests-grid">
+
+<div class="interest">Experiential Learning</div>
+<div class="interest">Outdoor Education</div>
+<div class="interest">Place-Based Education</div>
+<div class="interest">Environmental Literacy</div>
+<div class="interest">Student Leadership Development</div>
+<div class="interest">Expeditionary Learning</div>
+<div class="interest">International Education</div>
+<div class="interest">Curriculum Design</div>
+<div class="interest">Risk Management in Educational Travel</div>
+<div class="interest">Indigenous Knowledge &amp; Land-Based Learning</div>
+
+</div>
+
+</section>
+
+<section style="margin-top:4rem;">
+
+<h2 class="section-title">
+About the Author
+</h2>
+
+<div class="author">
+
+<p>
+Ryan McNeal is an educator and experiential learning specialist
+whose work focuses on outdoor education, place-based learning,
+expedition design, curriculum innovation, and student-centered
+approaches to teaching and learning. His projects span both
+Alaska and international educational contexts, supporting
+schools in creating meaningful opportunities for students to
+learn through exploration, service, reflection, and authentic
+engagement with communities and the natural world.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© 2027 Ryan McNeal | Research &amp; Professional Contributions
+</footer>
+
+</body>
+</html>
