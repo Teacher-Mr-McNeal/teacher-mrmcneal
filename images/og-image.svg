@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#234b6b"/>
+
+  <!-- Gold Divider -->
+  <rect x="450" y="255" width="300" height="6" fill="#c6984c"/>
+
+  <!-- Main Title -->
+  <text
+    x="600"
+    y="180"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="50"
+    font-weight="bold">
+    Learning In &amp; Beyond
+  </text>
+
+  <text
+    x="600"
+    y="235"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="50"
+    font-weight="bold">
+    the Classroom
+  </text>
+
+  <!-- Subtitle -->
+  <text
+    x="600"
+    y="315"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="26">
+    Educational Leadership • School Culture
+  </text>
+
+  <text
+    x="600"
+    y="355"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="26">
+    Technology Leadership • Student Success
+  </text>
+
+  <!-- Name -->
+  <text
+    x="600"
+    y="455"
+    fill="#c6984c"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="34"
+    font-weight="bold"
+    letter-spacing="4">
+    RYAN MCNEAL
+  </text>
+
+  <!-- Role -->
+  <text
+    x="600"
+    y="505"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="22">
+    Educational Leader • Technology Leader • Program Developer
+  </text>
+
+</svg>
