@@ -137,6 +137,46 @@ background:#eef2f5;
 color:#555;
 }
 
+.bottom-nav{
+    margin-top:4rem;
+    text-align:center;
+}
+
+.bottom-nav .nav-links{
+    display:flex;
+    justify-content:center;
+    gap:.5rem;
+    flex-wrap:wrap;
+}
+
+.bottom-nav .nav-links a{
+    background:#c6984c;
+    color:#ffffff;
+    font-weight:700;
+    letter-spacing:.3px;
+    text-decoration:none;
+    border:1px solid #c6984c;
+    border-radius:6px;
+    padding:.75rem 1rem;
+    font-size:.95rem;
+    white-space:nowrap;
+    transition:.25s ease;
+}
+
+.bottom-nav .nav-links a:hover,
+.bottom-nav .nav-links a:focus{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff;
+}
+
+.bottom-nav .current-page{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff;
+}
+
+
 @media (max-width:768px){
 .hero{
 padding:6rem 1rem;
@@ -349,6 +389,40 @@ engagement with communities and the natural world.
 
 </section>
 
+<section class="bottom-nav">
+    <nav class="nav-links" aria-label="Website navigation">
+        <a href="https://teachermrmcneal.org/">
+            Home
+        </a>
+
+        <a href="https://teachermrmcneal.org/cv/">
+            Curriculum Vitae
+        </a>
+
+        <a href="https://teachermrmcneal.org/research/"
+           class="current-page">
+            Research
+        </a>
+
+        <a href="https://teachermrmcneal.org/leadershiop">
+            Leadership
+        </a>
+
+        <a href="https://teachermrmcneal.org/design_portfolio">
+            Design Portfolio
+        </a>
+
+        <a href="https://www.instagram.com/teachermrmcneal"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        <a href="mailto:teachermrmcneal@gmail.com">
+            Contact
+        </a>
+    </nav>
+</section>
 </main>
 
 <footer>
