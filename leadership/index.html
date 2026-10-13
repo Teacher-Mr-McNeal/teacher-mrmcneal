@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ryan McNeal | Educational Leadership</title>
+
+<meta name="description" content="Educational leadership philosophy, school culture, restorative practices, student development, technology leadership, and experiential learning.">
+
+<meta name="keywords" content="Educational Leadership, Principal, Assistant Principal, Dean of Students, Technology Leadership, School Culture, Student Development, Restorative Practices, Ryan McNeal">
+
+<meta name="author" content="Ryan McNeal">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#234b6b">
+
+<link rel="canonical" href="https://teachermrmcneal.org/leadership/">
+
+<meta property="og:title" content="Ryan McNeal | Educational Leadership">
+<meta property="og:description" content="Building School Culture, Supporting Student Growth, and Preparing Learners for an Evolving World">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://teachermrmcneal.org/leadership/">
+<meta property="og:site_name" content="Ryan McNeal">
+<meta property="og:image" content="https://teachermrmcneal.org/images/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan McNeal | Educational Leadership">
+<meta name="twitter:description" content="Building School Culture, Supporting Student Growth, and Preparing Learners for an Evolving World">
+<meta name="twitter:image" content="https://teachermrmcneal.org/images/og-image.svg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Ryan McNeal",
+  "url":"https://teachermrmcneal.org",
+  "jobTitle":"Educational Leader",
+  "email":"mailto:teachermrmcneal@gmail.com",
+  "sameAs":[
+    "https://www.instagram.com/teachermrmcneal"
+  ]
+}
+</script>
+
+<style>
+
+:root{
+    --primary:#234b6b;
+    --secondary:#4f7ea8;
+    --accent:#c6984c;
+    --light:#f7f9fb;
+    --dark:#222222;
+    --white:#ffffff;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    background:#ffffff;
+    color:#222222;
+    line-height:1.7;
+}
+
+a:focus,
+a:focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:4px;
+}
+
+/* HERO */
+
+.hero{
+    background:#234b6b;
+    color:white;
+    text-align:center;
+    padding:3rem 1.5rem 2rem;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.75rem);
+    line-height:1.1;
+    margin-bottom:.5rem;
+}
+
+.hero-divider{
+    width:130px;
+    height:4px;
+    background:#c6984c;
+    margin:1rem auto;
+}
+
+.subtitle{
+    font-size:1.15rem;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:1rem 1.5rem 2rem;
+}
+
+/* NAVIGATION */
+
+.nav-wrap{
+    margin:1.5rem 0 2rem;
+}
+
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:.5rem;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    background:#c6984c;
+    color:#ffffff;
+    text-decoration:none;
+    border:1px solid #c6984c;
+    border-radius:6px;
+    padding:.75rem 1rem;
+    font-size:.95rem;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff;
+}
+
+.current-page{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff !important;
+    font-weight:700;
+}
+
+.current-page:hover,
+.current-page:focus{
+    background:#c6984c;
+    border-color:#c6984c;
+    color:#ffffff !important;
+}
+
+/* CONTENT SECTIONS */
+
+.section{
+    margin-bottom:3rem;
+}
+
+.section-title{
+    color:#234b6b;
+    font-size:2rem;
+    border-bottom:4px solid #c6984c;
+    display:inline-block;
+    padding-bottom:.5rem;
+    margin-bottom:1rem;
+}
+
+.statement{
+    font-size:1.1rem;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+    margin-top:1rem;
+}
+
+.card{
+    background:#f7f9fb;
+    border-left:6px solid #c6984c;
+    border-radius:10px;
+    padding:1.5rem;
+}
+
+.card h3{
+    color:#234b6b;
+    margin-bottom:.5rem;
+}
+
+.quote{
+    max-width:900px;
+    margin:3rem auto;
+    text-align:center;
+
+    color:var(--primary);
+
+    font-size:1.4rem;
+    line-height:1.7;
+
+    font-style:italic;
+    font-weight:500;
+
+    padding:1.5rem;
+
+    border-top:3px solid var(--accent);
+    border-bottom:3px solid var(--accent);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:2rem;
+    background:#eef2f5;
+}
+
+.footer-role{
+    color:#234b6b;
+    font-weight:600;
+    margin-bottom:.75rem;
+}
+
+.footer-copy{
+    color:#666;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:2.5rem 1rem 1.5rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nav-links a{
+        width:280px;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="hero" role="banner">
+
+    <div class="hero-content">
+
+        <h1>Educational Leadership</h1>
+
+        <div class="hero-divider"></div>
+
+        <div class="subtitle">
+            Building School Culture, Supporting Student Growth, and Preparing Learners for an Evolving World
+        </div>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <div class="nav-wrap">
+
+        <nav class="nav-links" aria-label="Primary navigation">
+
+            <a href="https://teachermrmcneal.org/">
+                Home
+            </a>
+
+            <a href="https://teachermrmcneal.org/cv/">
+                Curriculum Vitae
+            </a>
+
+            <a href="https://teachermrmcneal.org/research/">
+                Research
+            </a>
+
+            <a href="https://teachermrmcneal.org/leadership/" class="current-page">
+                Leadership
+            </a>
+
+            <a href="https://teachermrmcneal.org/">
+                Design Portfolio
+            </a>
+
+            <a href="https://www.instagram.com/teachermrmcneal"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visual Portfolio
+            </a>
+
+            <a href="mailto:teachermrmcneal@gmail.com">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+    <section class="section">
+
+        <h2 class="section-title">Leadership Philosophy</h2>
+
+        <div class="highlight-grid">
+
+            <div class="card">
+
+                <h3>Relationships</h3>
+
+                <p>
+                    Effective leadership begins with trust, relationships, and a genuine commitment to supporting students, educators, and families. Strong schools are built on meaningful connections and a shared sense of purpose.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Growth</h3>
+
+                <p>
+                    Schools should foster continuous improvement by encouraging reflection, innovation, collaboration, and lifelong learning. Educational leaders must create opportunities for students and staff to develop, adapt, and thrive.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Student Success</h3>
+
+                <p>
+                    Every decision should ultimately support student learning, well-being, belonging, and preparation for life beyond graduation. Academic achievement and personal growth are equally important outcomes of a successful school.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">School Culture &amp; Belonging</h2>
+
+        <div class="highlight-grid">
+
+            <div class="card">
+                <h3>Positive School Culture</h3>
+                <p>
+                    Strong school communities are built intentionally through relationships, high expectations, clear communication, and a shared commitment to learning.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Student Voice</h3>
+                <p>
+                    Students are more engaged when they have meaningful opportunities to contribute, lead, and shape their school community.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Belonging</h3>
+                <p>
+                    Every student deserves to feel known, valued, and connected to the school environment.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Student Development &amp; Accountability</h2>
+
+        <div class="card">
+
+            <p>
+                Student discipline should be viewed as an opportunity for learning and growth. Accountability remains essential, but successful schools balance consequences with reflection, support, and skill development.
+            </p>
+
+            <br>
+
+            <p>
+                The goal is not simply compliance, but helping students develop responsibility, empathy, self-regulation, and decision-making skills that prepare them for success beyond school.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Restorative Practices</h2>
+
+        <div class="card">
+
+            <p>
+                I am actively expanding my knowledge of restorative practices and relationship-centered approaches to student support. Restorative conversations, community-building circles, and collaborative problem-solving can strengthen school culture while reducing recurring behavioral concerns and improving relationships among students and staff.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Social-Emotional Learning</h2>
+
+        <div class="card">
+
+            <p>
+                Social-emotional learning is foundational to academic success. Students who develop emotional awareness, resilience, interpersonal skills, and self-management are better equipped to succeed academically, build healthy relationships, and navigate future challenges.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Technology Leadership</h2>
+
+        <div class="highlight-grid">
+
+            <div class="card">
+                <h3>Educational Technology</h3>
+                <p>
+                    Leveraging technology to strengthen teaching, learning, communication, and organizational effectiveness.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Exploring practical and responsible applications of AI that support educators while maintaining academic integrity and student-centered learning.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Citizenship</h3>
+                <p>
+                    Preparing students to navigate an increasingly connected world responsibly, ethically, and safely.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Experiential Learning</h2>
+
+        <div class="card">
+
+            <p>
+                Experiential learning remains a core educational belief. Through outdoor education, place-based learning, leadership development, service learning, community partnerships, and authentic experiences, students gain opportunities to apply classroom learning in meaningful and memorable ways.
+            </p>
+
+            <br>
+
+            <p>
+                These experiences develop confidence, resilience, collaboration, adaptability, and real-world problem-solving skills that serve students well beyond graduation.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2 class="section-title">Looking Ahead</h2>
+
+        <div class="card">
+
+            <p>
+                Education continues to evolve rapidly. Effective leaders must balance tradition and innovation while preparing students for an increasingly interconnected and technology-rich world.
+            </p>
+
+            <br>
+
+            <p>
+                My goal is to help schools create environments where students are challenged academically, supported socially, empowered emotionally, and prepared to thrive long after graduation.
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="quote">
+        “Leadership is not simply about managing systems; it is about creating conditions where students, educators, and communities can thrive.”
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="footer-role">
+        Educational Leader • Technology Leader • Program Developer
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Ryan McNeal
+    </div>
+
+</footer>
+
+</body>
+</html>
