@@ -1,212 +1,186 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/Person">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ryan McNeal — STEAM, Design Tech, Robotics, Computer Science, & Experiential Learning</title>
-  <meta name="description" content="Resume of Ryan McNeal — STEAM, Design Technology, Robotics, Computer Science, Experiential Learning Coordinator, and Activities Leader." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan McNeal | Professional CV</title>
+<style>
+:root{--navy:#234b6b;--gold:#c6984c;--light:#f7f9fb}
+body{font-family:Segoe UI,Arial,sans-serif;line-height:1.5;margin:0;background:#fff;color:#222}
+.header{background:var(--navy);color:#fff;padding:50px 30px;text-align:center}
+.container{max-width:1100px;margin:auto;padding:25px}
+h2{color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:8px}
+.card{background:var(--light);padding:18px;border-radius:8px;margin-bottom:18px}
+ul{line-height:1.5}
+.reference-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.reference-card{background:var(--light);border-left:5px solid var(--gold);padding:14px;border-radius:8px}
+.reference-card h3{margin:0 0 4px 0;color:var(--navy)}
+.reference-card p{margin:2px 0;line-height:1.5}
+.reference-button,.reference-placeholder{display:block;width:220px;text-align:center;background:var(--gold);color:white;text-decoration:none;padding:10px;border-radius:6px;margin-top:10px}
+.reference-placeholder{height:19px}
+.pdf-btn{background:var(--gold);color:white;padding:12px 18px;border:none;border-radius:6px;cursor:pointer}
+@media print{.pdf-btn{display:none}}
+.nav-wrap{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #d6dee9;
+}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet" />
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0b1220;
-      --muted: #3b4a67;
-      --card: #f7f9fc;
-      --border: #d6dee9;
-      --accent: #0b84f3;
-      --accent-2: #7c3aed;
-      --link: #0b84f3;
-      --focus: #f59e0b;
-      --radius: 14px;
-      --radius-sm: 10px;
-      --shadow: 0 10px 30px rgba(11, 18, 32, 0.12);
-      --font-sans: "Inter", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --maxw: 1200px;
-    }
+.nav-links a{
+    display:inline-block;
+    background:#234b6b;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:600;
+    transition:.25s ease;
+}
 
-    [data-theme="dark"] {
-      --bg: #0b1220;
-      --text: #e6edf5;
-      --muted: #b6c2d6;
-      --card: #121a2b;
-      --border: #24324a;
-      --accent: #22d3ee;
-      --accent-2: #a78bfa;
-      --link: #22d3ee;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
+.nav-links a:hover{
+    background:#c6984c;
+    color:#ffffff;
+}
 
-    html, body {
-      height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-      font-family: var(--font-sans);
-      line-height: 1.6;
-    }
-
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
-
-    header[role="banner"] {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px 20px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .identity h1 { margin: 0; font-size: 1.8rem; }
-    .identity .tagline { margin: 0; color: var(--muted); font-weight: 600; }
-
-    .contact { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 8px; font-size: 0.98rem; }
-    .contact a { color: var(--link); text-decoration: none; }
-    .contact a:hover { text-decoration: underline; }
-
-    .actions { display: inline-flex; align-items: center; gap: 10px; }
-    .btn { border: 1px solid var(--border); background: var(--bg); color: var(--text); padding: 8px 10px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; cursor: pointer; }
-    .btn-accent { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border: none; }
-
-    .toggle { display: inline-grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
-    .toggle button { border: none; background: transparent; color: var(--text); padding: 8px 12px; font-weight: 700; cursor: pointer; }
-    .toggle button.active { background: var(--accent); color: #fff; }
-
-    main[role="main"] { margin-top: 18px; display: grid; gap: 18px; }
-    section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
-    section > header h2 { margin: 0 0 6px; font-size: 1.25rem; color: var(--accent); }
-
-    footer[role="contentinfo"] { margin: 18px 0; color: var(--muted); font-size: 0.9rem; text-align: center; }
-
-    /* Responsive: remove sticky header on small screens */
-    @media (max-width: 600px) {
-      header[role="banner"] { position: static; }
-    }
-  </style>
+.current-page{
+    background:#c6984c !important;
+    color:#ffffff !important;
+}
+</style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header role="banner">
-      <div class="identity">
-        <h1>Ryan McNeal</h1>
-        <p class="tagline">STEAM | Design Tech | Experiential Learning | After School Activities</p>
-        <div class="contact">
-          <span><strong>Location:</strong> New Town, Yelahanka, Bangalore, India</span>
-          <span><strong>Phone:</strong> <a href="tel:+919606914636">+91 9606914636</a></span>
-          <span><strong>Email:</strong> <a href="mailto:teachermrmcneal@gmail.com">teachermrmcneal@gmail.com</a></span>
-          <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ryan-mcneal-344343138">linkedin.com/in/ryan-mcneal-344343138</a></span>
-          <span><strong>Instagram:</strong> <a href="https://www.teachermrmcneal.org/instagram">teachermrmcneal.org/instagram</a></span>
-        </div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-accent" id="printBtn">PDF</button>
-        <div class="toggle">
-          <button id="darkBtn">Dark</button>
-          <button id="lightBtn">Light</button>
-        </div>
-      </div>
-    </header>
+<div class="header">
+<h1>Ryan McNeal</h1>
+<p>Educational Leadership • School Culture • Technology Leadership • Student Success</p>
+<p>Galena, Alaska | teachermrmcneal@gmail.com | teachermrmcneal.org</p>
+<button class="pdf-btn" onclick="window.print()">Download / Print PDF</button>
+</div>
+<div class="container">
+<h2>Professional Summary</h2>
+<div class="card">Educational leader with experience in experiential learning, STEM, educational technology, outdoor education, student leadership, and international schools.</div>
 
-    <main role="main">
-      <!-- Summary -->
-      <section>
-        <header><h2>Professional Summary</h2></header>
-        <p>In my role as an Experiential Learning Coordinator, I am committed to providing global learners with enriching educational experiences. Through close collaboration with teaching teams, I organize activities and trips that spark curiosity and foster a love for discovery, learning and adventure. I leverage my experience as a STEAM and Technology teacher to inspire students to become innovative problem solvers.</p>
-      </section>
+<h2>Employment History</h2>
+<div class="card"><ul>
+<li><strong>Director of Activities & Outdoor Education</strong> – Galena Interior Learning Academy (2026–Present)</li>
+<li><strong>Head of Experiential Learning</strong> – Canadian International School Bangalore (2024–2026)</li>
+<li><strong>After School Activities Coordinator</strong> – Canadian International School Bangalore (2024–2026)</li>
+<li><strong>STEM, Design Technology & Computer Science Teacher</strong> – Cayman International School (2022–2024)</li>
+<li><strong>Engineering & Computer Science Teacher</strong> – Decatur High School (2019–2022)</li>
+<li><strong>ELL, Robotics & Computer Science Teacher</strong> – Mill Creek Middle School (2016–2018)</li>
+</ul></div>
 
-      <!-- Experience -->
-      <section>
-        <header><h2>Experience</h2></header>
-        <ul>
-          <li>ES Experiential Learning Coordinator — Canadian International School Bangalore (2024–Present)</li>
-          <li>ES After School Activities Coordinator — Canadian International School Bangalore (2024–Present)</li>
-          <li>MS STEM, Design Technology & Computer Science — Cayman International School (2022–2024)</li>
-          <li>HS Engineering and Computer Science — Decatur High School (2019–2022)</li>
-          <li>MS ELL, Robotics, and Computer Science — Mill Creek Middle School (2016–2018)</li>
-        </ul>
-      </section>
+<h2>Education</h2>
+<div class="card"><ul>
+<li>Doctorate in Educational Leadership - American College of Education (In progress - 2028)</li>
+<li>Principal Certification Washington State – Eastern Washington University (2024)</li>
+<li>Masters in Teaching: Secondary Education – Liberty University (2016)</li>
+<li>Masters in Teaching: Special Education – Liberty University (2016)</li>
+<li>Bachelor of Science: Business Instruction – Central Washington University (2010)</li>
+</ul></div>
 
-      <!-- Education -->
-      <section>
-        <header><h2>Education</h2></header>
-        <ul>
-          <li>Certificate in School Leadership — Eastern Washington University (2024)</li>
-          <li>Masters in Teaching: Secondary Education — Liberty University (2016)</li>
-          <li>Masters in Teaching: Special Education — Liberty University (2016)</li>
-          <li>Bachelors of Science: Business Instruction — Central Washington University (2010)</li>
-        </ul>
-      </section>
+<h2>Certificates & Credentials</h2>
+<div class="card"><ul>
+<li>Teachers Certification - OSPI Principal Certification</li><li>Teachers Certification - OSPI Technology Education</li><li>Teachers Certification - OSPI English Language Learners</li><li>MYP Design Category 1</li><li>Wilderness First Aid / WFR Instructor</li><li>UDL Credentials 1 & 2 (CAST)</li><li>National Institute for STEM Education Certificate</li><li>TESOL</li><li>Front End Web Development Certificate</li><li>Master Scuba Diver Trainer (PADI)</li>
+</ul></div>
 
-      <!-- Credentials -->
-      <section>
-        <header><h2>Certificates & Credentials</h2></header>
-        <ul>
-          <li>MYP Design Category 1 — International Baccalaureate</li>
-          <li>Wilderness First Aid/WFR Instructor — BASE Medical</li>
-          <<li>UDL Credentials 1 & 2 — Center for Applied Special Technology (CAST)</li>
-          <li>Certificate in STEM Education — National Institute for STEM Education</li>
-          <li>Teaching Speakers of Other Languages — Western Washington University</li>
-          <li>Front End Web Development Certificate — Peninsula College</li>
-          <li>Master Scuba Diver Trainer — PADI</li>
-        </ul>
-      </section>
+<h2>References</h2>
+<div class="reference-grid">
 
-      <!-- References -->
-      <section>
-        <header><h2>References</h2></header>
-        <ul>
-          <li>Chris Mockrish — ES Principal, Canadian International School Bangalore — esprincipal@cisb.org.in</li>
-          <li>Stacie Bosley — Literacy & Curriculum Coordinator, Canadian International School Bangalore — eslitcoordinator@cisb.org.in</li>
-          <li>Allie Hustead — Assistant Principal, Cayman International School — allie.hustead@cis.ky</li>
-          <li>Dr. Manouchka Pierre — Assistant Principal (former), Cayman International School — mpierre@gwa.ac.ma</li>
-          <li>Dennis Eller — Assistant Principal, Federal Way High School — reller@fwps.org</li>
-          <li>Charleen Prichard — Principal, Kilo Middle School — cprichar@fwps.org</li>
-        </ul>
-      </section>
-    </main>
+<div class="reference-card">
+<h3>Liz Hawley</h3>
+<p>Principal</p>
+<p>Galena City School District</p>
+<p><a href="mailto:elizabeth.hawley@gcsdk12.org" style="color:inherit;text-decoration:none;">elizabeth.hawley@gcsdk12.org</a></p>
+<div class="reference-placeholder"></div>
+</div>
 
-    <footer role="contentinfo">
-      <p>© <span id="year"></span> Ryan McNeal — All rights reserved.</p>
-    </footer>
-  </div>
+<div class="reference-card">
+<h3>Chris Mockrish</h3>
+<p>Elementary Principal</p>
+<p>Canadian International School</p>
+<p>Retired</p>
+<a class="reference-button" href="https://drive.google.com/file/d/17UJnJCaDYEIjclfgBCkBC9PFUtlXL4Py/view">View Recommendation Letter</a>
+</div>
 
-  <script>
-    (function () {
-      const root = document.documentElement;
-      const printBtn = document.getElementById('printBtn');
-      const yearEl = document.getElementById('year');
-      const darkBtn = document.getElementById('darkBtn');
-      const lightBtn = document.getElementById('lightBtn');
+<div class="reference-card">
+<h3>Stacie Bosley</h3>
+<p>Literacy &amp; Curriculum Coordinator</p>
+<p>Canadian International School</p>
+<p><a href="mailto:eslitcoordinator@cisb.org.in" style="color:inherit;text-decoration:none;">eslitcoordinator@cisb.org.in</a></p>
+<div class="reference-placeholder"></div>
+</div>
 
-      // Set current year
-      yearEl.textContent = new Date().getFullYear();
+<div class="reference-card">
+<h3>Allie Hustead</h3>
+<p>Assistant Principal</p>
+<p>Cayman International School</p>
+<p><a href="mailto:allie.hustead@cis.ky" style="color:inherit;text-decoration:none;">allie.hustead@cis.ky</a></p>
+<a class="reference-button" href="https://drive.google.com/file/d/1lQNeXJETrb0CN0dhNImY3eQP_7cHou26/view">View Recommendation Letter</a>
+</div>
 
-      // Theme toggle
-      function setTheme(mode) {
-        root.setAttribute('data-theme', mode === 'dark' ? 'dark' : 'light');
-        darkBtn.classList.toggle('active', mode === 'dark');
-        lightBtn.classList.toggle('active', mode === 'light');
-      }
+<div class="reference-card">
+<h3>Dennis Eller</h3>
+<p>Assistant Principal</p>
+<p>Federal Way Public Schools</p>
+<p><a href="mailto:reller@fwps.org" style="color:inherit;text-decoration:none;">reller@fwps.org</a></p>
+<div class="reference-placeholder"></div>
+</div>
 
-      darkBtn.addEventListener('click', () => setTheme('dark'));
-      lightBtn.addEventListener('click', () => setTheme('light'));
+<div class="reference-card">
+<h3>Charleen Prichard</h3>
+<p>Principal</p>
+<p>Kilo Middle School</p>
+<p><a href="mailto:cprichar@fwps.org" style="color:inherit;text-decoration:none;">cprichar@fwps.org</a></p>
+<a class="reference-button" href="https://drive.google.com/file/d/1kex2otEilr95RgCKwjl8iZmERdnDesbO/view">View Recommendation Letter</a>
+</div>
 
-      // Default to dark mode
-      setTheme('dark');
+</div>
+<div class="reference-card"><h3>Charleen Prichard</h3><p>Principal</p><p>Kilo Middle School</p><p>cprichar@fwps.org</p><a class="reference-button" href="https://drive.google.com/file/d/1kex2otEilr95RgCKwjl8iZmERdnDesbO/view">View Recommendation Letter</a></div>
+</div></div>
 
-      // Print to PDF
-      printBtn.addEventListener('click', () => window.print());
-    })();
-  </script>
-</body>
-</html>
+<div class="nav-wrap">
+
+    <nav class="nav-links" aria-label="Primary navigation">
+
+        <a href="https://teachermrmcneal.org/">
+            Home
+        </a>
+
+        <a href="https://teachermrmcneal.org/cv/" class="current-page">
+            Curriculum Vitae
+        </a>
+
+        <a href="https://teachermrmcneal.org/research/">
+            Research
+        </a>
+
+        <a href="https://teachermrmcneal.org/leadershiop">
+            Leadership
+        </a>
+
+        <a href="https://teachermrmcneal.org/design_portfolio">
+            Design Portfolio
+        </a>
+
+        <a href="https://www.instagram.com/teachermrmcneal"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        <a href="mailto:teachermrmcneal@gmail.com">
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+</body></html>
