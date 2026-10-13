@@ -1,397 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research | Ryan McNeal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ryan McNeal | Educational Leadership, School Culture, Technology Leadership & Student Success</title>
+
+<meta name="description" content="Ryan McNeal is an educational leader specializing in school culture, student success, technology leadership, restorative practices, experiential learning, and innovative program development.">
+
+<meta name="keywords" content="Ryan McNeal, Educational Leadership, Principal, Assistant Principal, Dean of Students, Technology Director, School Leadership, Student Success, School Culture, Restorative Practices, Educational Technology, Experiential Learning, International Education">
+
+<meta name="author" content="Ryan McNeal">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#234b6b">
+
+<link rel="canonical" href="https://teachermrmcneal.org/">
+
+<meta property="og:title" content="Ryan McNeal | Learning In & Beyond the Classroom">
+<meta property="og:description" content="Educational Leadership • School Culture • Technology Leadership • Student Success">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://teachermrmcneal.org/">
+<meta property="og:site_name" content="Ryan McNeal">
+<meta property="og:image" content="https://teachermrmcneal.org/images/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan McNeal | Educational Leadership">
+<meta name="twitter:description" content="Educational Leadership • School Culture • Technology Leadership • Student Success">
+<meta name="twitter:image" content="https://teachermrmcneal.org/images/og-image.svg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Ryan McNeal",
+  "url":"https://teachermrmcneal.org",
+  "jobTitle":"Educational Leader",
+  "email":"mailto:teachermrmcneal@gmail.com",
+  "sameAs":[
+    "https://www.instagram.com/teachermrmcneal"
+  ]
+}
+</script>
 
 <style>
+
 :root{
---primary:#234b6b;
---secondary:#4f7ea8;
---accent:#c6984c;
---light:#f7f9fb;
---dark:#222222;
---white:#ffffff;
---max-width:1100px;
+    --primary:#234b6b;
+    --secondary:#4f7ea8;
+    --accent:#c6984c;
+    --light:#f7f9fb;
+    --dark:#222222;
+    --white:#ffffff;
+    --max-width:1100px;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Georgia, "Times New Roman", serif;
-color:var(--dark);
-background:var(--white);
-line-height:1.7;
+    font-family:Georgia, "Times New Roman", serif;
+    background:#ffffff;
+    color:#222222;
+    line-height:1.6;
 }
 
+a:focus,
+a:focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:4px;
+}
+
+/* HERO */
+
 .hero{
-background:
-linear-gradient(rgba(35,75,107,.85), rgba(35,75,107,.85)),
-url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600");
-background-size:cover;
-background-position:center;
-color:white;
-text-align:center;
-padding:8rem 1.5rem;
+    background:#234b6b;
+    color:white;
+    text-align:center;
+    padding:3rem 1.5rem 2rem;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
 }
 
 .hero h1{
-font-size:clamp(2.5rem,5vw,4rem);
-margin-bottom:1rem;
+    font-size:clamp(2.5rem,5vw,4.75rem);
+    line-height:1.1;
+    margin-bottom:.5rem;
 }
 
-.hero p{
-max-width:800px;
-margin:0 auto;
-font-size:1.2rem;
+.hero-divider{
+    width:130px;
+    height:4px;
+    background:#c6984c;
+    margin:1rem auto;
 }
+
+.subtitle{
+    font-size:1.15rem;
+    max-width:800px;
+    margin:auto;
+}
+
+.name{
+    margin-top:1.25rem;
+    color:#c6984c;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+/* MAIN CONTENT */
 
 .container{
-max-width:1100px;
-margin:auto;
-padding:4rem 1.5rem;
+    max-width:1100px;
+    margin:auto;
+    padding:1rem 1.5rem 2rem;
 }
 
-.section-title{
-color:var(--primary);
-font-size:2rem;
-margin-bottom:2rem;
-border-bottom:4px solid var(--accent);
-display:inline-block;
-padding-bottom:.5rem;
-}
-
-.year{
-color:var(--secondary);
-font-size:1.8rem;
-margin-top:3rem;
-margin-bottom:1.5rem;
-}
-
-.project{
-background:var(--light);
-border-left:6px solid var(--accent);
-border-radius:10px;
-padding:1.75rem;
-margin-bottom:1.5rem;
-transition:all .2s ease;
-}
-
-.project:hover{
-transform:translateY(-2px);
-}
-
-.project h3{
-color:var(--primary);
-margin-bottom:.5rem;
-}
-
-.meta{
-color:#666;
-font-size:.95rem;
-margin-bottom:1rem;
-}
-
-.project a{
-color:var(--secondary);
-font-weight:bold;
-text-decoration:none;
-}
-
-.project a:hover{
-text-decoration:underline;
-}
-
-.interests-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:1rem;
-}
-
-.interest{
-background:var(--light);
-padding:1rem;
-border-radius:8px;
-}
-
-.author{
-background:var(--light);
-padding:2rem;
-border-radius:10px;
-}
-
-footer{
-text-align:center;
-padding:2rem;
-margin-top:4rem;
-background:#eef2f5;
-color:#555;
-}
-
-.bottom-nav{
-    margin-top:4rem;
+.statement{
+    max-width:850px;
+    margin:auto;
     text-align:center;
+    font-size:1.1rem;
 }
 
-.bottom-nav .nav-links{
+.statement p{
+    margin-bottom:.75rem;
+}
+
+/* NAVIGATION */
+
+.nav-wrap{
+    margin:1.5rem 0;
+}
+
+.nav-links{
     display:flex;
     justify-content:center;
     gap:.5rem;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
 }
 
-.bottom-nav .nav-links a{
+.nav-links a{
     background:#c6984c;
     color:#ffffff;
+
     font-weight:700;
     letter-spacing:.3px;
+
     text-decoration:none;
+
     border:1px solid #c6984c;
     border-radius:6px;
+
     padding:.75rem 1rem;
+
     font-size:.95rem;
+
     white-space:nowrap;
+
     transition:.25s ease;
 }
 
-.bottom-nav .nav-links a:hover,
-.bottom-nav .nav-links a:focus{
+.nav-links a:hover,
+.nav-links a:focus{
     background:#234b6b;
     border-color:#234b6b;
     color:#ffffff;
 }
 
-.bottom-nav .current-page{
+/* CURRENT PAGE */
+
+.current-page{
     background:#234b6b;
     border-color:#234b6b;
-    color:#ffffff;
+    color:#ffffff !important;
+    font-weight:bold;
 }
 
+.current-page:hover,
+.current-page:focus{
+    background:#c6984c;
+    border-color:#c6984c;
+    color:#ffffff !important;
+}/* HIGHLIGHTS */
+
+.highlights{
+    text-align:center;
+    margin-top:1.5rem;
+}
+
+.section-title{
+    color:#234b6b;
+    font-size:2rem;
+    border-bottom:4px solid #c6984c;
+    display:inline-block;
+    padding-bottom:.5rem;
+    margin-bottom:1rem;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.25rem;
+    margin-top:1rem;
+}
+
+.highlight-card{
+    background:#f7f9fb;
+    border-left:6px solid #c6984c;
+    border-radius:10px;
+    padding:1.5rem;
+    text-align:left;
+}
+
+.highlight-card h3{
+    color:#234b6b;
+    margin-bottom:.5rem;
+}
+
+.quote{
+    max-width:900px;
+    margin:3rem auto;
+    text-align:center;
+
+    color:var(--primary);
+
+    font-size:1.4rem;
+    line-height:1.7;
+
+    font-style:italic;
+    font-weight:500;
+
+    padding:1.5rem;
+
+    border-top:3px solid var(--accent);
+    border-bottom:3px solid var(--accent);
+}
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:2rem;
+    background:#eef2f5;
+}
+
+.footer-role{
+    color:#234b6b;
+    font-weight:600;
+    margin-bottom:.75rem;
+}
+
+.footer-copy{
+    color:#666;
+}
+
+/* TABLET */
+
+@media (max-width:1100px){
+
+    .nav-links{
+        flex-wrap:wrap;
+    }
+
+}
+
+/* MOBILE */
 
 @media (max-width:768px){
-.hero{
-padding:6rem 1rem;
+
+    .hero{
+        padding:2.5rem 1rem 1.5rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .statement{
+        font-size:1rem;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nav-links a{
+        width:280px;
+        text-align:center;
+    }
+
 }
 
-.hero p{
-font-size:1rem;
-}
-}
 </style>
 </head>
 
 <body>
 
-<header class="hero">
-<h1>Learning Beyond the Classroom</h1>
-<p>
-Research, Resources, and Program Development in Experiential and Outdoor Education
-</p>
+<header class="hero" role="banner">
+
+    <div class="hero-content">
+
+        <h1>Learning In &amp; Beyond the Classroom</h1>
+
+        <div class="hero-divider"></div>
+
+        <div class="subtitle">
+            Educational Leadership • School Culture • Technology Leadership • Student Success
+        </div>
+
+        <div class="name">
+            Ryan McNeal
+        </div>
+
+    </div>
+
 </header>
 
 <main class="container">
 
-<section>
+    <section class="statement">
 
-<h2 class="section-title">
-Professional Contributions &amp; Research
-</h2>
+        <p>
+            I work at the intersection of educational leadership, student development, technology, and experiential learning. My focus includes building positive school culture, supporting student success, implementing innovative programs, leveraging technology to improve learning, and creating systems that help students and educators thrive both in and beyond the classroom.
+        </p>
 
-<!-- ========================= -->
-<!-- 2027 -->
-<!-- ========================= -->
+        
+    </section>
 
-<h3 class="year">2027</h3>
+    <div class="nav-wrap">
 
-<article class="project">
-<h3>Outdoor Education Manual for Alaska</h3>
+    <nav class="nav-links" aria-label="Primary navigation">
 
-<p class="meta">
-Galena City School District • Outdoor Education • 2027
-</p>
-
-<p>
-A comprehensive framework for implementing place-based outdoor
-education programs across Alaska. The manual emphasizes
-experiential learning, environmental stewardship, safety,
-risk management, and culturally responsive educational practices.
-</p>
-
-<p>
-<a href="https://teachermrmcneal.org/research/galena-outdoor-academy/index.html"
-target="_blank"
-rel="noopener noreferrer">
-View Project →
-</a>
-</p>
-</article>
-
-<!-- ========================= -->
-<!-- 2026 -->
-<!-- ========================= -->
-
-<h3 class="year">2026</h3>
-
-<article class="project">
-<h3>Experiential Learning Operations Manual</h3>
-
-<p class="meta">
-Canadian International School • Program Development • 2026
-</p>
-
-<p>
-A comprehensive operational guide for the implementation and
-management of experiential learning programs, including planning
-protocols, logistics, risk management procedures, staffing
-practices, and educational outcomes.
-</p>
-
-<p>
-<a href="https://docs.google.com/document/d/1tDkMbGNOPHnzHOIzbMlBQG5OVf6gtusY8Qig35WWnqc/edit?usp=drive_link"
-target="_blank"
-rel="noopener noreferrer">
-View Document →
-</a>
-</p>
-</article>
-
-<article class="project">
-<h3>Experiential Learning Progression by Grade Level</h3>
-
-<p class="meta">
-Galena City School District • Curriculum Framework • 2026
-</p>
-
-<p>
-A developmental progression describing experiential learning
-competencies and outcomes across grade bands, helping schools
-align outdoor and experiential learning experiences from
-elementary through secondary levels.
-</p>
-
-<p>
-<a href="https://teachermrmcneal.org/research/galena-outdoor-academy/index.html"
-target="_blank"
-rel="noopener noreferrer">
-View Project →
-</a>
-</p>
-</article>
-
-<!-- ========================= -->
-<!-- 2025 -->
-<!-- ========================= -->
-
-<h3 class="year">2025</h3>
-
-<article class="project">
-<h3>Grade 5 Mysore Learning Expedition</h3>
-
-<p class="meta">
-Canadian International School • Experiential Learning • 2025
-</p>
-
-<p>
-A multi-day learning expedition designed to immerse students in
-the cultural, historical, environmental, and social dimensions
-of Mysore through authentic inquiry, reflection, leadership,
-and interdisciplinary learning experiences.
-</p>
-
-<p>
-<a href="https://sites.google.com/cisb.org.in/grade5trip/home"
-target="_blank"
-rel="noopener noreferrer">
-Visit Website →
-</a>
-</p>
-</article>
-
-<!-- ========================= -->
-<!-- 2024 -->
-<!-- ========================= -->
-
-<h3 class="year">2024</h3>
-
-<article class="project">
-<h3>Grade 4 Hampi Learning Expedition</h3>
-
-<p class="meta">
-Canadian International School • Field Studies • 2024
-</p>
-
-<p>
-An immersive field experience introducing students to the
-history, geography, culture, and heritage of Hampi through
-a structured experiential learning model and place-based
-educational approach.
-</p>
-
-<p>
-<a href="https://sites.google.com/cisb.org.in/2024-cis-g4-camp/start-here?authuser=0"
-target="_blank"
-rel="noopener noreferrer">
-Visit Website →
-</a>
-</p>
-</article>
-
-</section>
-
-<section style="margin-top:4rem;">
-
-<h2 class="section-title">
-Research Interests
-</h2>
-
-<div class="interests-grid">
-<div class="interest">Experiential Learning</div>
-<div class="interest">Outdoor Education</div>
-<div class="interest">Place-Based Education</div>
-<div class="interest">Environmental Literacy</div>
-<div class="interest">Student Leadership Development</div>
-<div class="interest">Expeditionary Learning</div>
-<div class="interest">International Education</div>
-<div class="interest">Curriculum Design</div>
-<div class="interest">Risk Management in Educational Travel</div>
-<div class="interest">Indigenous Knowledge &amp; Land-Based Learning</div>
-</div>
-
-</section>
-
-<section style="margin-top:4rem;">
-
-<h2 class="section-title">
-About the Author
-</h2>
-
-<div class="author">
-<p>
-Ryan McNeal is an educator and experiential learning specialist
-whose work focuses on outdoor education, place-based learning,
-expedition design, curriculum innovation, and student-centered
-approaches to teaching and learning. His projects span both
-Alaska and international educational contexts, supporting
-schools in creating meaningful opportunities for students to
-learn through exploration, service, reflection, and authentic
-engagement with communities and the natural world.
-</p>
-</div>
-
-</section>
-
-<section class="bottom-nav">
-    <nav class="nav-links" aria-label="Website navigation">
-        <a href="https://teachermrmcneal.org/">
+        <a href="https://teachermrmcneal.org/" class="current-page">
             Home
         </a>
 
@@ -399,8 +353,7 @@ engagement with communities and the natural world.
             Curriculum Vitae
         </a>
 
-        <a href="https://teachermrmcneal.org/research/"
-           class="current-page">
+        <a href="https://teachermrmcneal.org/research/">
             Research
         </a>
 
@@ -421,12 +374,69 @@ engagement with communities and the natural world.
         <a href="mailto:teachermrmcneal@gmail.com">
             Contact
         </a>
+
     </nav>
-</section>
+
+</div>
+
+    <section class="highlights">
+
+        <h2 class="section-title">
+            Professional Highlights
+        </h2>
+
+        <div class="highlight-grid">
+
+            <article class="highlight-card">
+                <h3>Educational Leadership</h3>
+                <p>Student development, school culture, discipline systems, behavior support, and restorative practices.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Technology Leadership</h3>
+                <p>Educational technology, artificial intelligence, web development, digital learning, and technology integration.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Program Development</h3>
+                <p>Experiential learning, outdoor education, leadership development, and innovative school programs.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Research &amp; Publications</h3>
+                <p>Educational resources, operational guides, curriculum frameworks, and professional contributions.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Global Perspective</h3>
+                <p>Professional experience across Alaska, Asia, and diverse international educational environments.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Student Success</h3>
+                <p>Social-emotional learning, relationship-centered education, leadership development, restorative practices, and student growth.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <div class="quote">
+        “Meaningful learning extends beyond textbooks, connecting students to their communities, their world, and their potential.”
+    </div>
+
 </main>
 
-<footer>
-© 2027 Ryan McNeal | Research &amp; Professional Contributions
+<footer role="contentinfo">
+
+    <div class="footer-role">
+        Educational Leader • Technology Leader • Program Developer
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Ryan McNeal
+    </div>
+
 </footer>
 
 </body>
