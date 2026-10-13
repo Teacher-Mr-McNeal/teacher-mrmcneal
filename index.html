@@ -1,203 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teacher Mr. McNeal</title>
-  <!-- Google Fonts: Sigmar One & Voltaire -->
-  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Voltaire&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #000;
-      color: #d4af37;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ryan McNeal | Educational Leadership, School Culture, Technology Leadership & Student Success</title>
+
+<meta name="description" content="Ryan McNeal is an educational leader specializing in school culture, student success, technology leadership, restorative practices, experiential learning, and innovative program development.">
+
+<meta name="keywords" content="Ryan McNeal, Educational Leadership, Principal, Assistant Principal, Dean of Students, Technology Director, School Leadership, Student Success, School Culture, Restorative Practices, Educational Technology, Experiential Learning, International Education">
+
+<meta name="author" content="Ryan McNeal">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#234b6b">
+
+<link rel="canonical" href="https://teachermrmcneal.org/">
+
+<meta property="og:title" content="Ryan McNeal | Learning In & Beyond the Classroom">
+<meta property="og:description" content="Educational Leadership • School Culture • Technology Leadership • Student Success">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://teachermrmcneal.org/">
+<meta property="og:site_name" content="Ryan McNeal">
+<meta property="og:image" content="https://teachermrmcneal.org/images/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ryan McNeal | Educational Leadership">
+<meta name="twitter:description" content="Educational Leadership • School Culture • Technology Leadership • Student Success">
+<meta name="twitter:image" content="https://teachermrmcneal.org/images/og-image.svg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Ryan McNeal",
+  "url":"https://teachermrmcneal.org",
+  "jobTitle":"Educational Leader",
+  "email":"mailto:teachermrmcneal@gmail.com",
+  "sameAs":[
+    "https://www.instagram.com/teachermrmcneal"
+  ]
+}
+</script>
+
+<style>
+
+:root{
+    --primary:#234b6b;
+    --secondary:#4f7ea8;
+    --accent:#c6984c;
+    --light:#f7f9fb;
+    --dark:#222222;
+    --white:#ffffff;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    background:#ffffff;
+    color:#222222;
+    line-height:1.6;
+}
+
+a:focus,
+a:focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:4px;
+}
+
+/* HERO */
+
+.hero{
+    background:#234b6b;
+    color:white;
+    text-align:center;
+    padding:3rem 1.5rem 2rem;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.75rem);
+    line-height:1.1;
+    margin-bottom:.5rem;
+}
+
+.hero-divider{
+    width:130px;
+    height:4px;
+    background:#c6984c;
+    margin:1rem auto;
+}
+
+.subtitle{
+    font-size:1.15rem;
+    max-width:800px;
+    margin:auto;
+}
+
+.name{
+    margin-top:1.25rem;
+    color:#c6984c;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+/* MAIN CONTENT */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:1rem 1.5rem 2rem;
+}
+
+.statement{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+.statement p{
+    margin-bottom:.75rem;
+}
+
+/* NAVIGATION */
+
+.nav-wrap{
+    margin:1.5rem 0;
+}
+
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:.5rem;
+    flex-wrap:nowrap;
+}
+
+.nav-links a{
+    background:#c6984c;
+    color:#ffffff;
+
+    font-weight:700;
+    letter-spacing:.3px;
+
+    text-decoration:none;
+
+    border:1px solid #c6984c;
+    border-radius:6px;
+
+    padding:.75rem 1rem;
+
+    font-size:.95rem;
+
+    white-space:nowrap;
+
+    transition:.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff;
+}
+
+/* CURRENT PAGE */
+
+.current-page{
+    background:#234b6b;
+    border-color:#234b6b;
+    color:#ffffff !important;
+    font-weight:bold;
+}
+
+.current-page:hover,
+.current-page:focus{
+    background:#c6984c;
+    border-color:#c6984c;
+    color:#ffffff !important;
+}/* HIGHLIGHTS */
+
+.highlights{
+    text-align:center;
+    margin-top:1.5rem;
+}
+
+.section-title{
+    color:#234b6b;
+    font-size:2rem;
+    border-bottom:4px solid #c6984c;
+    display:inline-block;
+    padding-bottom:.5rem;
+    margin-bottom:1rem;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.25rem;
+    margin-top:1rem;
+}
+
+.highlight-card{
+    background:#f7f9fb;
+    border-left:6px solid #c6984c;
+    border-radius:10px;
+    padding:1.5rem;
+    text-align:left;
+}
+
+.highlight-card h3{
+    color:#234b6b;
+    margin-bottom:.5rem;
+}
+
+.quote{
+    max-width:900px;
+    margin:3rem auto;
+    text-align:center;
+
+    color:var(--primary);
+
+    font-size:1.4rem;
+    line-height:1.7;
+
+    font-style:italic;
+    font-weight:500;
+
+    padding:1.5rem;
+
+    border-top:3px solid var(--accent);
+    border-bottom:3px solid var(--accent);
+}
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:2rem;
+    background:#eef2f5;
+}
+
+.footer-role{
+    color:#234b6b;
+    font-weight:600;
+    margin-bottom:.75rem;
+}
+
+.footer-copy{
+    color:#666;
+}
+
+/* TABLET */
+
+@media (max-width:1100px){
+
+    .nav-links{
+        flex-wrap:wrap;
     }
 
-    /* Header container */
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-left: 0.25em;
-      padding-top: 0.25em;
-      max-width: 90%;
-      position: relative;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:2.5rem 1rem 1.5rem;
     }
 
-    /* Unified hero box with continuous vertical line */
-    .hero-box {
-      border-left: 4px solid #d4af37; /* gold vertical line */
-      padding-left: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .subtitle{
+        font-size:1rem;
     }
 
-    .hero-box .site-name {
-      font-family: 'Voltaire', sans-serif;
-      font-size: 1.6rem;
-      margin-bottom: 4px;
+    .statement{
+        font-size:1rem;
     }
 
-    .hero-box .hero-words {
-      font-family: 'Sigmar One', cursive;
-      font-size: 2rem;
-      letter-spacing: 2px;
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
     }
 
-    /* Carousel container */
-    .carousel {
-      position: relative;
-      flex: 1;
-      max-width: 100%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .nav-links a{
+        width:280px;
+        text-align:center;
     }
 
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity 1s ease;
-      z-index: 0;
-    }
+}
 
-    .carousel img.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    /* Links section moved to top right */
-    .links {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      text-align: right;
-    }
-
-    .links a {
-      color: #d4af37;
-      text-decoration: none;
-      margin-left: 10px;
-      font-size: 1.1rem;
-      font-family: 'Voltaire', sans-serif;
-    }
-
-    .links a:focus,
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    a:focus {
-      outline: 2px solid #fff;
-      outline-offset: 4px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      .hero-box {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-box .site-name {
-        font-size: 1.2rem;
-      }
-      .links {
-        text-align: center;
-        position: static;
-        padding: 20px;
-      }
-      .links a {
-        display: inline-block;
-        margin: 10px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <!-- Header with unified hero box -->
-  <header class="header" role="banner">
-    <div class="hero-box">
-      <div class="site-name">Teacher Mr. McNeal</div>
-      <div class="hero-words">Impact · Inspire · Innovate</div>
+
+<header class="hero" role="banner">
+
+    <div class="hero-content">
+
+        <h1>Learning In &amp; Beyond the Classroom</h1>
+
+        <div class="hero-divider"></div>
+
+        <div class="subtitle">
+            Educational Leadership • School Culture • Technology Leadership • Student Success
+        </div>
+
+        <div class="name">
+            Ryan McNeal
+        </div>
+
     </div>
-  </header>
 
-  <!-- Carousel -->
-  <section class="carousel" role="region" aria-label="Photo carousel of my work" id="carousel">
-    <!-- Images will be injected by JavaScript -->
-  </section>
+</header>
 
-  <!-- Links -->
-  <nav class="links" role="navigation" aria-label="External links">
-    <a href="https://www.teachermrmcneal.org/cv" aria-label="View Curriculum Vitae document">Curriculum Vitae</a>&nbsp;|&nbsp;
-    <a href="https://www.teachermrmcneal.org/research" aria-label="View Research materials">Research</a>&nbsp;|&nbsp;
-    <a href="https://www.teachermrmcneal.org/instagram" aria-label="View Portfolio">Portfolio</a>&nbsp;|&nbsp;
-    <a href="mailto:teachermrmcneal@gmail.com" aria-label="Send an email to Teacher Mr. McNeal">Email</a>
-  </nav>
+<main class="container">
 
-  <script>
-    // Configuration
-    const totalImages = 57; // upper bound, safe to leave high
-    const imageFolder = "images/";
-    const imagePrefix = "img";
-    const imageExt = ".jpg";
+    <section class="statement">
 
-    const carousel = document.getElementById("carousel");
-    let imagePaths = [];
+        <p>
+            I work at the intersection of educational leadership, student development, technology, and experiential learning. My focus includes building positive school culture, supporting student success, implementing innovative programs, leveraging technology to improve learning, and creating systems that help students and educators thrive both in and beyond the classroom.
+        </p>
 
-    // Build paths
-    for (let i = 1; i <= totalImages; i++) {
-      const num = String(i).padStart(3, '0');
-      imagePaths.push(`${imageFolder}${imagePrefix}${num}${imageExt}`);
-    }
+        
+    </section>
 
-    // Shuffle
-    for (let i = imagePaths.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [imagePaths[i], imagePaths[j]] = [imagePaths[j], imagePaths[i]];
-    }
+    <div class="nav-wrap">
 
-    // Add images with error handling
-    let validImages = [];
-    imagePaths.forEach((path, index) => {
-      const img = document.createElement("img");
-      img.src = path;
-      img.alt = `Photography work ${index + 1}`;
-      img.onerror = () => {
-        console.warn(`Skipping missing image: ${path}`);
-        img.remove(); // don’t show broken link
-      };
-      img.onload = () => {
-        if (validImages.length === 0) img.classList.add("active");
-        validImages.push(img);
-      };
-      carousel.appendChild(img);
-    });
+    <nav class="nav-links" aria-label="Primary navigation">
 
-    // Cycle through only valid images
-    let currentIndex = 0;
-    function showNextImage() {
-      if (validImages.length === 0) return;
-      validImages[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % validImages.length;
-      validImages[currentIndex].classList.add("active");
-    }
+        <a href="https://teachermrmcneal.org/" class="current-page">
+            Home
+        </a>
 
-    setInterval(showNextImage, 5000);
-  </script>
+        <a href="https://teachermrmcneal.org/cv/">
+            Curriculum Vitae
+        </a>
+
+        <a href="https://teachermrmcneal.org/research/">
+            Research
+        </a>
+
+        <a href="https://teachermrmcneal.org/leadershiop">
+            Leadership
+        </a>
+
+        <a href="https://teachermrmcneal.org/design_portfolio">
+            Design Portfolio
+        </a>
+
+        <a href="https://www.instagram.com/teachermrmcneal"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        <a href="mailto:teachermrmcneal@gmail.com">
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+    <section class="highlights">
+
+        <h2 class="section-title">
+            Professional Highlights
+        </h2>
+
+        <div class="highlight-grid">
+
+            <article class="highlight-card">
+                <h3>Educational Leadership</h3>
+                <p>Student development, school culture, discipline systems, behavior support, and restorative practices.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Technology Leadership</h3>
+                <p>Educational technology, artificial intelligence, web development, digital learning, and technology integration.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Program Development</h3>
+                <p>Experiential learning, outdoor education, leadership development, and innovative school programs.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Research &amp; Publications</h3>
+                <p>Educational resources, operational guides, curriculum frameworks, and professional contributions.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Global Perspective</h3>
+                <p>Professional experience across Alaska, Asia, and diverse international educational environments.</p>
+            </article>
+
+            <article class="highlight-card">
+                <h3>Student Success</h3>
+                <p>Social-emotional learning, relationship-centered education, leadership development, restorative practices, and student growth.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <div class="quote">
+        “Meaningful learning extends beyond textbooks, connecting students to their communities, their world, and their potential.”
+    </div>
+
+</main>
+
+<footer role="contentinfo">
+
+    <div class="footer-role">
+        Educational Leader • Technology Leader • Program Developer
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Ryan McNeal
+    </div>
+
+</footer>
+
 </body>
 </html>
