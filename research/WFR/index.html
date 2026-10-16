@@ -1,1 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WFR Patient Cards</title>
 
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:20px;
+    background:#ffffff;
+}
+
+ .wfr-container,.card-container{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.wfr-card,.card{
+    border:2px solid #000;
+    padding:10px;
+    box-sizing:border-box;
+    line-height:1.15;
+    font-size:12px;
+    min-height:180px;
+    background:white;
+    page-break-inside:avoid;
+    break-inside:avoid;
+}
+
+.wfr-title,.card h3{
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.wfr-card p{
+    margin:3px 0;
+}
+
+@media print{
+
+    body{
+        margin:.25in;
+    }
+
+     .wfr-container,.card-container{
+        gap:30px;
+    }
+
+    .wfr-card,.card{
+        border:2px solid #000;
+        page-break-inside:avoid;
+        break-inside:avoid;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<h1>Wilderness First Responder - Patient Scenario Cards</h1>
+<h2>STERI</h2>
+<div class="wfr-container">
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #1 SCENE SAFETY</div>
+<p>* Chief Complaint: Scraped leg.</p>
+<p>* How to Act: Sit near unstable riverbank.</p>
+<p>* Only If Asked: Slipped crossing creek.</p>
+<p>* If Examined: Minor shin abrasion.</p>
+<p>* Vitals: HR 88, RR 16, Skin warm/dry, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #2 SCENE SAFETY</div>
+<p>* Chief Complaint: Shoulder pain.</p>
+<p>* How to Act: Sitting beneath dead tree.</p>
+<p>* Only If Asked: Branch fell nearby.</p>
+<p>* If Examined: Minor tenderness.</p>
+<p>* Vitals: HR 84, RR 16, Skin warm/dry, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #3 SCENE SAFETY</div>
+<p>* Chief Complaint: Knee pain.</p>
+<p>* How to Act: Standing beside ATV on slope.</p>
+<p>* Only If Asked: Tripped hiking.</p>
+<p>* If Examined: Scraped knee.</p>
+<p>* Vitals: HR 86, RR 16, Skin warm/dry, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #4 SCENE SAFETY</div>
+<p>* Chief Complaint: Hand pain.</p>
+<p>* How to Act: Near active bee nest.</p>
+<p>* Only If Asked: Disturbed bees.</p>
+<p>* If Examined: Mild swelling.</p>
+<p>* Vitals: HR 88, RR 18, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">PPE #5 GLOVES</div>
+<p>* Chief Complaint: Forearm cut.</p>
+<p>* How to Act: Hold bleeding arm.</p>
+<p>* Only If Asked: Knife slipped while carving.</p>
+<p>* If Examined: Moderate bleeding.</p>
+<p>* Vitals: HR 96, RR 18, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">PPE #6 BLOOD CONTACT</div>
+<p>* Chief Complaint: Leg wound.</p>
+<p>* How to Act: Request help immediately.</p>
+<p>* Only If Asked: Cut by sharp metal.</p>
+<p>* If Examined: Blood visible on pant leg.</p>
+<p>* Vitals: HR 102, RR 20, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">PPE #7 BODY FLUIDS</div>
+<p>* Chief Complaint: Headache and nausea.</p>
+<p>* How to Act: Vomit into bag during assessment.</p>
+<p>* Only If Asked: Symptoms started an hour ago.</p>
+<p>* If Examined: No injuries.</p>
+<p>* Vitals: HR 90, RR 16, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">PPE #8 RESPONDER SAFETY</div>
+<p>* Chief Complaint: Wrist pain.</p>
+<p>* How to Act: Hold wrist against chest.</p>
+<p>* Only If Asked: Fell from log.</p>
+<p>* If Examined: Swollen wrist.</p>
+<p>* Vitals: HR 84, RR 16, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">HAZARD #9 WATER</div>
+<p>* Chief Complaint: Cold and wet.</p>
+<p>* How to Act: Light shivering.</p>
+<p>* Only If Asked: Fell into creek.</p>
+<p>* If Examined: Wet clothing.</p>
+<p>* Vitals: HR 94, RR 18, Skin cool, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">HAZARD #10 TRAFFIC</div>
+<p>* Chief Complaint: Leg pain.</p>
+<p>* How to Act: Standing in roadway.</p>
+<p>* Only If Asked: Bike crash.</p>
+<p>* If Examined: Bruised shin.</p>
+<p>* Vitals: HR 88, RR 16, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">HAZARD #11 WEATHER</div>
+<p>* Chief Complaint: Dizziness.</p>
+<p>* How to Act: Squint into strong wind.</p>
+<p>* Only If Asked: Walking in storm.</p>
+<p>* If Examined: No trauma.</p>
+<p>* Vitals: HR 92, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">HAZARD #12 WILDLIFE</div>
+<p>* Chief Complaint: Hand injury.</p>
+<p>* How to Act: Keep looking behind you.</p>
+<p>* Only If Asked: Saw bear nearby.</p>
+<p>* If Examined: Minor scrape.</p>
+<p>* Vitals: HR 104, RR 22, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SIZE-UP #13 MOI</div>
+<p>* Chief Complaint: Ankle pain.</p>
+<p>* How to Act: Limp heavily.</p>
+<p>* Only If Asked: Stepped in hole.</p>
+<p>* If Examined: Ankle swelling.</p>
+<p>* Vitals: HR 88, RR 16, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SIZE-UP #14 FALL</div>
+<p>* Chief Complaint: Hip pain.</p>
+<p>* How to Act: Sitting on ground.</p>
+<p>* Only If Asked: Fell from rock.</p>
+<p>* If Examined: Pain with movement.</p>
+<p>* Vitals: HR 94, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SIZE-UP #15 COLLISION</div>
+<p>* Chief Complaint: Shoulder pain.</p>
+<p>* How to Act: Guard shoulder.</p>
+<p>* Only If Asked: Ran into tree.</p>
+<p>* If Examined: Tender shoulder.</p>
+<p>* Vitals: HR 90, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SIZE-UP #16 UNKNOWN MECH</div>
+<p>* Chief Complaint: Not sure.</p>
+<p>* How to Act: Unsure what happened.</p>
+<p>* Only If Asked: Found sitting near trail.</p>
+<p>* If Examined: No obvious injury.</p>
+<p>* Vitals: HR 86, RR 16, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">LIFE THREAT #17 BLEEDING</div>
+<p>* Chief Complaint: Arm bleeding.</p>
+<p>* How to Act: Panic and hold arm.</p>
+<p>* Only If Asked: Axe injury.</p>
+<p>* If Examined: Heavy venous bleed.</p>
+<p>* Vitals: HR 112, RR 22, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">LIFE THREAT #18 AIRWAY</div>
+<p>* Chief Complaint: Can't breathe.</p>
+<p>* How to Act: Cough repeatedly.</p>
+<p>* Only If Asked: Choked eating trail mix.</p>
+<p>* If Examined: Partial obstruction.</p>
+<p>* Vitals: HR 98, RR 24, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">LIFE THREAT #19 LOC</div>
+<p>* Chief Complaint: Head injury.</p>
+<p>* How to Act: Respond slowly.</p>
+<p>* Only If Asked: Hit head on branch.</p>
+<p>* If Examined: Forehead abrasion.</p>
+<p>* Vitals: HR 92, RR 18, AVPU=V.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">LIFE THREAT #20 UNRESPONSIVE</div>
+<p>* Chief Complaint: Unresponsive patient.</p>
+<p>* How to Act: No response to voice.</p>
+<p>* Only If Asked: N/A.</p>
+<p>* If Examined: Responds only to pain.</p>
+<p>* Vitals: HR 60, RR 8, AVPU=P.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SHOCK #21 EARLY SHOCK</div>
+<p>* Chief Complaint: Dizziness.</p>
+<p>* How to Act: Wants to sit down.</p>
+<p>* Only If Asked: Leg laceration.</p>
+<p>* If Examined: Hidden bleeding.</p>
+<p>* Vitals: HR 112, RR 22, Cool/pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SHOCK #22 COMPENSATED SHOCK</div>
+<p>* Chief Complaint: Weakness.</p>
+<p>* How to Act: Slow answers.</p>
+<p>* Only If Asked: Fell carrying pack.</p>
+<p>* If Examined: Abrasions present.</p>
+<p>* Vitals: HR 120, RR 24, Cool/pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SHOCK #23 PROGRESSING SHOCK</div>
+<p>* Chief Complaint: Very tired.</p>
+<p>* How to Act: Increasingly lethargic.</p>
+<p>* Only If Asked: ATV crash.</p>
+<p>* If Examined: Abdominal tenderness.</p>
+<p>* Vitals: HR 128, RR 28, Pale/clammy, AVPU=V.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SHOCK #24 SEVERE SHOCK</div>
+<p>* Chief Complaint: I don't feel good.</p>
+<p>* How to Act: Confused and weak.</p>
+<p>* Only If Asked: Significant bleeding earlier.</p>
+<p>* If Examined: Pale skin and delayed responses.</p>
+<p>* Vitals: HR 136, RR 30, Cool/clammy, AVPU=V.</p>
+</div>
+</div>
+<h2>Bleeding & Wound Management Patient Cards</h2>
+
+<div class="wfr-container">
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #25 VENOUS BLEED</div>
+<p>* Chief Complaint: My arm won't stop bleeding.</p>
+<p>* How to Act: Hold forearm and appear worried.</p>
+<p>* Only If Asked: Cut arm while processing firewood.</p>
+<p>* If Examined: Slow steady dark-red bleeding.</p>
+<p>* Vitals: HR 96, RR 18, Skin warm, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #26 ARTERIAL BLEED</div>
+<p>* Chief Complaint: My leg is bleeding badly.</p>
+<p>* How to Act: Panic and yell for help.</p>
+<p>* Only If Asked: Axe struck upper thigh.</p>
+<p>* If Examined: Bright red spurting bleed.</p>
+<p>* Vitals: HR 124, RR 26, Cool/pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #27 BLOOD SWEEP</div>
+<p>* Chief Complaint: I feel weak.</p>
+<p>* How to Act: Tell students you don't know why you feel dizzy.</p>
+<p>* Only If Asked: Slipped on river rocks.</p>
+<p>* If Examined: Hidden bleeding on back of calf. Say: "You found blood."</p>
+<p>* Vitals: HR 112, RR 22, Pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #28 PRESSURE DRESSING</div>
+<p>* Chief Complaint: My hand was cut.</p>
+<p>* How to Act: Guard hand.</p>
+<p>* Only If Asked: Knife slipped while carving.</p>
+<p>* If Examined: Deep palm laceration.</p>
+<p>* Vitals: HR 98, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #29 FACE LACERATION</div>
+<p>* Chief Complaint: My face is bleeding.</p>
+<p>* How to Act: Overreact to the amount of blood.</p>
+<p>* Only If Asked: Hit by tree branch.</p>
+<p>* If Examined: Forehead laceration bleeding heavily.</p>
+<p>* Vitals: HR 92, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #30 SCALP WOUND</div>
+<p>* Chief Complaint: My head hurts.</p>
+<p>* How to Act: Continuously touch scalp.</p>
+<p>* Only If Asked: Walked into a low branch.</p>
+<p>* If Examined: Scalp laceration with significant bleeding.</p>
+<p>* Vitals: HR 94, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #31 SHOCK TREND</div>
+<p>* Chief Complaint: I'm getting dizzy.</p>
+<p>* How to Act: Become weaker every few minutes.</p>
+<p>* Only If Asked: Cut lower leg 30 minutes ago.</p>
+<p>* If Examined: Blood-soaked bandana under pants.</p>
+<p>* Vitals: HR 118, RR 24, Cool/pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #32 HIDDEN WOUND</div>
+<p>* Chief Complaint: My back hurts.</p>
+<p>* How to Act: Lie on side.</p>
+<p>* Only If Asked: Fell onto metal debris.</p>
+<p>* If Examined: Bleeding wound on lower back.</p>
+<p>* Vitals: HR 108, RR 20, Pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #33 FOREARM LAC</div>
+<p>* Chief Complaint: My arm hurts.</p>
+<p>* How to Act: Protect forearm.</p>
+<p>* Only If Asked: Broke glass while camping.</p>
+<p>* If Examined: Long forearm laceration.</p>
+<p>* Vitals: HR 96, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #34 CHAINSAW</div>
+<p>* Chief Complaint: My leg is bleeding.</p>
+<p>* How to Act: Serious concern and increasing weakness.</p>
+<p>* Only If Asked: Chainsaw kicked back.</p>
+<p>* If Examined: Severe lower leg wound.</p>
+<p>* Vitals: HR 126, RR 28, Cool/clammy, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #35 5-POINT HYPERWRAP</div>
+<p>* Chief Complaint: My thigh hurts.</p>
+<p>* How to Act: Hold pressure over wound.</p>
+<p>* Only If Asked: Sharp stump punctured leg.</p>
+<p>* If Examined: Large bleeding thigh wound.</p>
+<p>* Vitals: HR 110, RR 22, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #36 BANDAGE FAILURE</div>
+<p>* Chief Complaint: It's still bleeding.</p>
+<p>* How to Act: Show concern after initial bandaging.</p>
+<p>* Only If Asked: Hatchet injury.</p>
+<p>* If Examined: Blood soaking through dressing.</p>
+<p>* Vitals: HR 118, RR 24, Pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">TRAUMA #37 STERI</div>
+<p>* Chief Complaint: My arm hurts.</p>
+<p>* How to Act: Cooperative patient.</p>
+<p>* Only If Asked: Fell carrying wood.</p>
+<p>* If Examined: Forearm laceration requiring full STERI assessment.</p>
+<p>* Vitals: HR 98, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">TRAUMA #38 SAMPLE</div>
+<p>* Chief Complaint: My calf is bleeding.</p>
+<p>* How to Act: Do not volunteer history.</p>
+<p>* Only If Asked: Blood thinner medication. Last meal 1 hour ago.</p>
+<p>* If Examined: Moderate calf wound.</p>
+<p>* Vitals: HR 104, RR 20, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">TRAUMA #39 OPQRST</div>
+<p>* Chief Complaint: Severe leg pain.</p>
+<p>* How to Act: Give pain details only when asked.</p>
+<p>* Only If Asked: Pain began immediately after fall.</p>
+<p>* If Examined: Bleeding shin wound.</p>
+<p>* Vitals: HR 102, RR 20, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">TRAUMA #40 PATIENT CARE</div>
+<p>* Chief Complaint: Arm cut.</p>
+<p>* How to Act: Ask if you'll be okay.</p>
+<p>* Only If Asked: Wood-processing accident.</p>
+<p>* If Examined: Controlled bleeding arm wound.</p>
+<p>* Vitals: HR 96, RR 18, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #41 EVAC DECISION</div>
+<p>* Chief Complaint: Leg wound.</p>
+<p>* How to Act: Able to walk but weak.</p>
+<p>* Only If Asked: Six miles from trailhead.</p>
+<p>* If Examined: Controlled but serious bleed.</p>
+<p>* Vitals: HR 112, RR 22, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #42 MULTIPLE WOUNDS</div>
+<p>* Chief Complaint: Everything hurts.</p>
+<p>* How to Act: Point to several injuries.</p>
+<p>* Only If Asked: Bike crash.</p>
+<p>* If Examined: Two minor wounds, one major bleed.</p>
+<p>* Vitals: HR 118, RR 24, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #43 DISTRACTION</div>
+<p>* Chief Complaint: My shoulder hurts.</p>
+<p>* How to Act: Focus only on shoulder pain.</p>
+<p>* Only If Asked: Slipped on rocks.</p>
+<p>* If Examined: Hidden bleeding thigh wound.</p>
+<p>* Vitals: HR 116, RR 24, Pale, AVPU=A.</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">BLEEDING #44 INTEGRATED</div>
+<p>* Chief Complaint: I'm dizzy and my leg hurts.</p>
+<p>* How to Act: Cooperative but worried.</p>
+<p>* Only If Asked: Cut leg using an axe. No allergies. No medications.</p>
+<p>* If Examined: Significant leg laceration requiring bleed control, SAMPLE, OPQRST, and evacuation discussion.</p>
+<p>* Vitals: HR 122, RR 24, Cool/pale, AVPU=A.</p>
+</div>
+</div>
+
+
+<h2>Patient Cards: Wilderness Trauma</h2>
+
+
+<div class="wfr-container">
+
+<!-- 45 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #45 BLEEDING & WOUND MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Hold your forearm and appear concerned. Tell rescuers the bleeding started immediately after a hatchet slipped while splitting wood.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Injury happened 10 minutes ago.</li>
+<li>No allergies.</li>
+<li>No medical problems.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Deep forearm laceration.</li>
+<li>Bright red blood pulsing from wound.</li>
+<li>Skin pale.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 112, R 24, Skin pale/warm, AVPU=A</p>
+</div>
+
+<!-- 46 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #46 BLEEDING & WOUND MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Sit calmly and show a heavily bleeding cut on your lower leg after slipping onto sharp metal.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Fell 20 minutes ago.</li>
+<li>Able to walk.</li>
+<li>Pain is moderate.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Steady dark-red bleeding.</li>
+<li>4-inch laceration.</li>
+<li>No deformity.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 96, R 18, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 47 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #47 BLEEDING & WOUND MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Complain about a painful knee wound after falling on a gravel trail.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Happened 2 hours ago.</li>
+<li>Cleaning has not been attempted.</li>
+<li>Walking hurts.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Large abrasion.</li>
+<li>Dirt and gravel present.</li>
+<li>Minor bleeding.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 84, R 16, Skin warm/dry, AVPU=A</p>
+</div>
+
+<!-- 48 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #48 BLEEDING & WOUND MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Hold a soaked bandana around your hand and state the bleeding keeps restarting.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Knife slipped while cleaning fish.</li>
+<li>No medications.</li>
+<li>Occurred 15 minutes ago.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Deep palm laceration.</li>
+<li>Continuous bleeding.</li>
+<li>Good circulation to fingers.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 102, R 20, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 49 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #49 MUSCULOSKELETAL INJURIES</div>
+
+<p><span class="section-title">How to Act:</span> Refuse to stand and complain of severe lower-leg pain after jumping from a rock.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Heard a snap.</li>
+<li>Unable to bear weight.</li>
+<li>No other injuries.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Obvious tib/fib deformity.</li>
+<li>Severe swelling.</li>
+<li>Pulse present in foot.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 108, R 22, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 50 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #50 MUSCULOSKELETAL INJURIES</div>
+
+<p><span class="section-title">How to Act:</span> Hold your wrist after falling on an outstretched hand.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Occurred 30 minutes ago.</li>
+<li>Cannot grip strongly.</li>
+<li>No numbness.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Swelling around wrist.</li>
+<li>Tender to touch.</li>
+<li>Limited movement.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 88, R 16, Skin warm/dry, AVPU=A</p>
+</div>
+
+<!-- 51 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #51 MUSCULOSKELETAL INJURIES</div>
+
+<p><span class="section-title">How to Act:</span> Limp dramatically after rolling your ankle during a hike.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Heard no snap.</li>
+<li>Can bear limited weight.</li>
+<li>Pain worsening.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Significant ankle swelling.</li>
+<li>Tender on outer ankle.</li>
+<li>No deformity.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 84, R 16, Skin warm/dry, AVPU=A</p>
+</div>
+
+<!-- 52 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #52 MUSCULOSKELETAL INJURIES</div>
+
+<p><span class="section-title">How to Act:</span> Support one arm with the opposite hand and complain of severe shoulder pain.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Slipped while carrying a canoe.</li>
+<li>Pain increases with movement.</li>
+<li>No previous injuries.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Shoulder visibly asymmetric.</li>
+<li>Unable to raise arm.</li>
+<li>Good circulation to hand.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 96, R 18, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 53 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #53 SPINAL INJURY MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Remain lying still after a mountain bike crash and complain of neck pain.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Went over handlebars.</li>
+<li>Wearing helmet.</li>
+<li>No loss of consciousness.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Neck tenderness.</li>
+<li>No obvious deformity.</li>
+<li>Normal movement in feet and hands.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 90, R 18, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 54 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #54 SPINAL INJURY MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Complain of back pain after falling from a climbing wall.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Fall was around 8 feet.</li>
+<li>Landed on back.</li>
+<li>No loss of consciousness.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Mid-back tenderness.</li>
+<li>Moves all extremities.</li>
+<li>Pain when attempting to sit up.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 92, R 18, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 55 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #55 SPINAL INJURY MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Complain of neck pain and tingling in one arm after striking your head.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Slipped on ice.</li>
+<li>Hit head on a rock.</li>
+<li>No vomiting.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Neck tenderness.</li>
+<li>Tingling right arm.</li>
+<li>No major bleeding.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 88, R 18, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 56 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #56 SPINAL INJURY MANAGEMENT</div>
+
+<p><span class="section-title">How to Act:</span> Appear confused about how you ended up at the base of a steep embankment.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Cannot remember the fall.</li>
+<li>Back hurts.</li>
+<li>Headache present.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Minor scalp abrasion.</li>
+<li>Midline back tenderness.</li>
+<li>No extremity deformities.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 96, R 18, Skin warm, AVPU=V</p>
+</div>
+
+<!-- 57 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #57 HEAD, CHEST & ABDOMINAL TRAUMA</div>
+
+<p><span class="section-title">How to Act:</span> Repeatedly ask rescuers what happened after colliding with another player.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Head-to-head impact.</li>
+<li>Brief confusion.</li>
+<li>No neck pain.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Headache.</li>
+<li>Slow responses.</li>
+<li>Pupils equal.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 82, R 16, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 58 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #58 HEAD, CHEST & ABDOMINAL TRAUMA</div>
+
+<p><span class="section-title">How to Act:</span> Guard one side of your chest and take shallow breaths.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Struck by falling branch.</li>
+<li>Breathing hurts.</li>
+<li>No previous chest injury.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Pain over lower ribs.</li>
+<li>No major bruising.</li>
+<li>Equal chest rise.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 96, R 24, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 59 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #59 HEAD, CHEST & ABDOMINAL TRAUMA</div>
+
+<p><span class="section-title">How to Act:</span> Hold your abdomen and complain of worsening pain.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Fell onto a log.</li>
+<li>Nausea present.</li>
+<li>Pain increasing.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Abdominal tenderness.</li>
+<li>Guarding present.</li>
+<li>No external bleeding.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 104, R 22, Skin pale/warm, AVPU=A</p>
+</div>
+
+<!-- 60 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #60 HEAD, CHEST & ABDOMINAL TRAUMA</div>
+
+<p><span class="section-title">How to Act:</span> Report headache, dizziness, and nausea after being struck in the head.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>No loss of consciousness.</li>
+<li>Symptoms worsening.</li>
+<li>Remember entire event.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Small bump on scalp.</li>
+<li>Balance mildly impaired.</li>
+<li>Pupils equal.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 84, R 16, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 61 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #61 TRAUMA DAY</div>
+
+<p><span class="section-title">How to Act:</span> Complain of shoulder pain and multiple scrapes after a mountain bike crash.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>High-speed collision.</li>
+<li>Helmet worn.</li>
+<li>No loss of consciousness.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Shoulder pain.</li>
+<li>Road rash.</li>
+<li>Normal circulation.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 98, R 20, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 62 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #62 TRAUMA DAY</div>
+
+<p><span class="section-title">How to Act:</span> Remain on the ground after a 15-foot fall.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Severe leg pain.</li>
+<li>Back hurts.</li>
+<li>Cannot stand.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Possible lower-leg fracture.</li>
+<li>Back tenderness.</li>
+<li>Minor abrasions.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 106, R 22, Skin warm, AVPU=A</p>
+</div>
+
+<!-- 63 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #63 TRAUMA DAY</div>
+
+<p><span class="section-title">How to Act:</span> Complain of severe upper-leg pain after slipping during a river crossing.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Unable to walk.</li>
+<li>Pain is severe.</li>
+<li>Nearest road is several miles away.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Obvious femur deformity.</li>
+<li>Swelling present.</li>
+<li>No external bleeding.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 118, R 24, Skin pale, AVPU=A</p>
+</div>
+
+<!-- 64 -->
+<div class="wfr-card">
+<div class="wfr-title">SCENE #64 TRAUMA DAY</div>
+
+<p><span class="section-title">How to Act:</span> Appear anxious and cold after being thrown from an ATV.</p>
+
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Chest pain present.</li>
+<li>Arm laceration bleeding.</li>
+<li>Leg pain present.</li>
+</ul>
+
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Multiple abrasions.</li>
+<li>Bleeding arm wound.</li>
+<li>Possible lower-leg injury.</li>
+</ul>
+
+<p><strong>Vitals:</strong> P 122, R 26, Skin cool/pale, AVPU=A</p>
+</div>
+
+</div>
+</div>
+<h1>Wilderness First Responder</h1>
+<h2>Advanced Trauma & Critical Patient Cards (AVPU V/U)</h2>
+
+<div class="wfr-container">
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #65 ANAPHYLAXIS</div>
+<p><span class="section-title">How to Act:</span> Only responds when spoken to loudly. Speech is hoarse and limited.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Stung by multiple bees 15 minutes ago.</li>
+<li>Known allergy.</li>
+<li>No epinephrine available.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Facial swelling.</li>
+<li>Noisy breathing.</li>
+<li>Generalized hives.</li>
+</ul>
+<p><strong>Vitals:</strong> P 132, R 30, Skin flushed, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #66 ANAPHYLAXIS</div>
+<p><span class="section-title">How to Act:</span> Unresponsive on the ground.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Ate trail mix containing peanuts.</li>
+<li>Symptoms rapidly worsened.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Swollen lips and tongue.</li>
+<li>Weak radial pulse.</li>
+<li>Labored breathing.</li>
+</ul>
+<p><strong>Vitals:</strong> P 140, R 8, Skin pale, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #67 SEVERE HEAD TRAUMA</div>
+<p><span class="section-title">How to Act:</span> Opens eyes only when rescuers shout your name.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Fell 12 feet from a rock.</li>
+<li>Witnessed loss of consciousness.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Scalp laceration.</li>
+<li>Confused responses.</li>
+<li>Unequal pupils.</li>
+</ul>
+<p><strong>Vitals:</strong> P 54, R 10, Skin cool, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #68 SEVERE HEAD TRAUMA</div>
+<p><span class="section-title">How to Act:</span> Remain completely unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Thrown from ATV.</li>
+<li>Helmet not worn.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Blood behind one ear.</li>
+<li>Shallow breathing.</li>
+<li>Snoring airway sounds.</li>
+</ul>
+<p><strong>Vitals:</strong> P 48, R 8, Skin pale, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #69 FEMUR FRACTURE WITH SHOCK</div>
+<p><span class="section-title">How to Act:</span> Answers only with one-word responses.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Slipped during river crossing.</li>
+<li>Unable to walk.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Obvious femur deformity.</li>
+<li>Pale skin.</li>
+<li>Increasing confusion.</li>
+</ul>
+<p><strong>Vitals:</strong> P 136, R 30, Skin cool/clammy, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #70 INTERNAL BLEEDING</div>
+<p><span class="section-title">How to Act:</span> Barely responds when spoken to.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Struck abdomen on log.</li>
+<li>Pain steadily worsening.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Rigid abdomen.</li>
+<li>No external bleeding.</li>
+<li>Signs of shock.</li>
+</ul>
+<p><strong>Vitals:</strong> P 142, R 32, Skin cool/pale, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #71 TENSION PNEUMOTHORAX</div>
+<p><span class="section-title">How to Act:</span> Only able to answer with short words.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Fell onto a sharp branch.</li>
+<li>Breathing became harder over time.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Chest wound.</li>
+<li>Severe respiratory distress.</li>
+<li>One side rises less than the other.</li>
+</ul>
+<p><strong>Vitals:</strong> P 138, R 34, Skin pale, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #72 OPEN CHEST INJURY</div>
+<p><span class="section-title">How to Act:</span> Responds slowly when spoken to.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Impaled by broken branch.</li>
+<li>Removed object before rescuers arrived.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Sucking chest wound.</li>
+<li>Rapid respirations.</li>
+<li>Severe distress.</li>
+</ul>
+<p><strong>Vitals:</strong> P 130, R 32, Skin cool, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #73 HYPOTHERMIA</div>
+<p><span class="section-title">How to Act:</span> Slow speech and delayed answers.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Capsized canoe.</li>
+<li>Wet for several hours.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Shivering weakly.</li>
+<li>Poor coordination.</li>
+<li>Cold skin.</li>
+</ul>
+<p><strong>Vitals:</strong> P 48, R 10, Skin cold, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #74 SEVERE HYPOTHERMIA</div>
+<p><span class="section-title">How to Act:</span> Unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Missing overnight in winter conditions.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Cold rigid body.</li>
+<li>Very slow respirations.</li>
+<li>Weak pulse.</li>
+</ul>
+<p><strong>Vitals:</strong> P 28, R 4, Skin extremely cold, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #75 HEAT STROKE</div>
+<p><span class="section-title">How to Act:</span> Confused and difficult to awaken.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Long hike during hot afternoon.</li>
+<li>Little water consumed.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Hot skin.</li>
+<li>Altered mental status.</li>
+<li>No sweating.</li>
+</ul>
+<p><strong>Vitals:</strong> P 136, R 30, Skin hot, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #76 HEAT STROKE</div>
+<p><span class="section-title">How to Act:</span> Unresponsive on trail.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Collapsed suddenly.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Extremely hot skin.</li>
+<li>Rapid pulse.</li>
+<li>No trauma noted.</li>
+</ul>
+<p><strong>Vitals:</strong> P 150, R 28, Skin hot/dry, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #77 DIABETIC EMERGENCY</div>
+<p><span class="section-title">How to Act:</span> Slow responses and confusion.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>History of diabetes.</li>
+<li>Missed a meal.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Shaky.</li>
+<li>Clammy skin.</li>
+<li>Difficulty concentrating.</li>
+</ul>
+<p><strong>Vitals:</strong> P 110, R 20, Skin cool, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #78 DIABETIC EMERGENCY</div>
+<p><span class="section-title">How to Act:</span> Unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Known diabetic.</li>
+<li>Insulin found nearby.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>No major injuries.</li>
+<li>Weak pulse.</li>
+<li>Moist skin.</li>
+</ul>
+<p><strong>Vitals:</strong> P 118, R 18, Skin cool/clammy, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #79 MULTISYSTEM TRAUMA</div>
+<p><span class="section-title">How to Act:</span> Groans when spoken to.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>High-speed ATV crash.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Femur deformity.</li>
+<li>Chest bruising.</li>
+<li>Abdominal tenderness.</li>
+</ul>
+<p><strong>Vitals:</strong> P 140, R 32, Skin cool/pale, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #80 MULTISYSTEM TRAUMA</div>
+<p><span class="section-title">How to Act:</span> Unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Thrown from snowmachine.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Multiple deformities.</li>
+<li>Scalp bleeding.</li>
+<li>Abnormal breathing.</li>
+</ul>
+<p><strong>Vitals:</strong> P 150, R 8, Skin pale, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #81 SPINAL TRAUMA</div>
+<p><span class="section-title">How to Act:</span> Answers only when repeatedly spoken to.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Dove into shallow water.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Neck pain.</li>
+<li>Weakness in both arms.</li>
+<li>Limited movement.</li>
+</ul>
+<p><strong>Vitals:</strong> P 60, R 12, Skin cool, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #82 LIGHTNING STRIKE</div>
+<p><span class="section-title">How to Act:</span> Unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Thunderstorm passed moments ago.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Burn marks present.</li>
+<li>No major bleeding.</li>
+<li>Possible cardiac involvement.</li>
+</ul>
+<p><strong>Vitals:</strong> P 40, R 6, Skin pale, AVPU=U</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #83 DROWING INCIDENT</div>
+<p><span class="section-title">How to Act:</span> Responds only to verbal stimulation.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Pulled from river two minutes ago.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Wet clothing.</li>
+<li>Coughing water.</li>
+<li>Labored breathing.</li>
+</ul>
+<p><strong>Vitals:</strong> P 128, R 30, Skin cool, AVPU=V</p>
+</div>
+
+<div class="wfr-card">
+<div class="wfr-title">SCENE #84 DROWNING INCIDENT</div>
+<p><span class="section-title">How to Act:</span> Completely unresponsive.</p>
+<p><span class="section-title">Only If Asked:</span></p>
+<ul>
+<li>Submerged for unknown time.</li>
+</ul>
+<p><span class="section-title">If Examined:</span></p>
+<ul>
+<li>Wet clothing.</li>
+<li>Cyanotic lips.</li>
+<li>Minimal respirations.</li>
+</ul>
+<p><strong>Vitals:</strong> P 36, R 4, Skin cold, AVPU=U</p>
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
